@@ -1,1 +1,3 @@
-Hi!
+== bossman
+
+This gem provides methods to interact with Yahoo's BOSS web service.
