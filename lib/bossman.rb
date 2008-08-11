@@ -7,7 +7,8 @@ require 'rexml/document'
 
 module BOSSMan
   VERSION = :v1
-    
+  BASE_URI = "http://boss.yahooapis.com/ysearch"
+  
   def application_id(application_id=nil)
     raise MissingConfiguration, "Application ID must be set prior to making a service call" unless @application_id || application_id
     return @application_id unless application_id #get
@@ -64,7 +65,7 @@ module BOSSMan
   
   private
   def get_from_boss(method, query, options)
-    uri = URI.parse("http://boss.yahooapis.com/ysearch/#{method}/#{VERSION}/#{query}")
+    uri = URI.parse("#{BASE_URI}/#{method}/#{VERSION}/#{query}")
     uri.query = options.to_query
 
     request = Net::HTTP::Get.new(uri.request_uri)
