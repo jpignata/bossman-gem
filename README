@@ -1,3 +1,11 @@
-== bossman
+= BOSSMan -- Class for interaction with the Yahoo BOSS web service
 
-This gem provides methods to interact with Yahoo's BOSS web service.
+== Description
+
+BOSSMan can be used to perform image, web and news searches against Yahoo's index. For more information about BOSS (Build your Own Search Service) please refer to http://developer.yahoo.com/search/boss/
+
+== Installation
+
+   jp@populuxe:~/code/ruby$ gem sources -a http://gems.github.com
+   jp@populuxe:~/code/ruby$ gem install jpignata-bossman
+

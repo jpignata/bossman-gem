@@ -30,7 +30,7 @@ module BOSSMan
     options[:region] = region if region
     
     get_from_boss(method, query, options)
-    end
+  end
   
   def images_search(query, start=0, count=10, filter=nil, dimensions=nil, refererurl=nil, url=nil)
     method = "images"
@@ -75,12 +75,16 @@ module BOSSMan
       when Net::HTTPSuccess
         return ActiveSupport::JSON.decode(response.body)["ysearchresponse"]        
       else
-        response_document = REXML::Document.new(response.body)
-        code = REXML::XPath.first(response_document, '//yahoo:code').text
-        description = REXML::XPath.first(response_document, '//yahoo:description').text
-        detail = REXML::XPath.first(response_document, '//yahoo:detail').text
-        raise BOSSError, "#{code} #{description}: #{detail}"
+        raise BOSSError, parse_error(response.body)
     end
+  end
+  
+  def parse_error(response_string)
+    response_document = REXML::Document.new(response_string)
+    code = REXML::XPath.first(response_document, '//yahoo:code').text
+    description = REXML::XPath.first(response_document, '//yahoo:description').text
+    detail = REXML::XPath.first(response_document, '//yahoo:detail').text
+    return "#{code} #{description}: #{detail}"
   end
   
   class MissingConfiguration < StandardError; end
