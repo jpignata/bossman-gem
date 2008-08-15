@@ -10,13 +10,14 @@ module BOSSMan
   BASE_URI = "http://boss.yahooapis.com/ysearch"
   
   def application_id(application_id=nil)
-    raise MissingConfiguration, "Application ID must be set prior to making a service call" unless @application_id || application_id
-    return @application_id unless application_id #get
-    @application_id = application_id #set
+    return @application_id unless application_id
+    @application_id = application_id
   end
       
   def web_search(query, start=0, count=10, filter=nil, type=nil, lang=nil, region=nil)    
     method = "web"
+    
+    validate_parameters(count)
     
     options = { 
       :appid => application_id,
@@ -35,6 +36,8 @@ module BOSSMan
   def images_search(query, start=0, count=10, filter=nil, dimensions=nil, refererurl=nil, url=nil)
     method = "images"
 
+    validate_parameters(count)
+    
     options = { 
       :appid => application_id,
       :count => count,
@@ -51,6 +54,8 @@ module BOSSMan
   
   def news_search(query, start=0, count=10, age=nil)
     method = "news"
+    
+    validate_parameters(count)
     
     options = { 
       :appid => application_id,
@@ -87,7 +92,18 @@ module BOSSMan
     return "#{code} #{description}: #{detail}"
   end
   
+  def validate_parameters(count) 
+    unless @application_id
+      raise MissingConfiguration, "Application ID must be set prior to making a service call."
+    end
+  
+    unless count > 0 
+      raise InvalidParameter, "Invalid count. Count must be > 0." 
+    end
+  end
+  
   class MissingConfiguration < StandardError; end
+  class InvalidParameter < StandardError; end
   class BOSSError < StandardError; end
   
 end
