@@ -109,6 +109,10 @@ BOSSMan can be used to perform image, web and news searches against Yahoo's inde
    jp@populuxe:~/code/ruby$ gem sources -a http://gems.github.com
    jp@populuxe:~/code/ruby$ gem install jpignata-bossman
 
+== Requirements
+
+* Active Support >= 2.1
+
 == LICENSE:
 
 (The MIT License)
