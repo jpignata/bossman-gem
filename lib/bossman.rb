@@ -1,14 +1,7 @@
 require 'rubygems'
 require 'active_support'
 
-$:.unshift(File.dirname(__FILE__)) unless
-  $:.include?(File.dirname(__FILE__)) || $:.include?(File.expand_path(File.dirname(__FILE__)))
-
-require 'bossman/search'
-require 'bossman/rest'
-require 'bossman/basevalueobject'
-require 'bossman/resultset'
-require 'bossman/result'
+Dir["#{File.dirname(__FILE__)}/bossman/*.rb"].each { |bossman_lib| require bossman_lib }
 
 module BOSSMan
   API_VERSION = :v1

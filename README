@@ -41,7 +41,7 @@ BOSSMan can be used to perform image, web and news searches against Yahoo's inde
 	  puts "-" * 80
 	  puts "#{result.abstract}"
 	  puts
-	
+		
 === Images
 
 	require 'rubygems'
@@ -55,6 +55,7 @@ BOSSMan can be used to perform image, web and news searches against Yahoo's inde
 	dumbo_images.results.each do |result|
 	  puts "<img src=\"#{result.url}\" alt=\"#{result.abstract}\" /><br />"
 	end
+	
 	
 == Output Objects
 
@@ -103,6 +104,15 @@ BOSSMan can be used to perform image, web and news searches against Yahoo's inde
 .results[].thumbnailurl		: URL of thumbnail image
 .results[].thumbnail_height : Height of thumbnail image
 .results[].thumbnail_width  : Width of thumbnail image
+
+=== Format
+
+Results are dumpable in JSON, XML and YAML by use of to_json, to_xml (or to_s), to_yaml respectively.
+
+puts websearch			 			: dumps XML 
+puts websearch.to_json	 			: dumps JSON
+puts websearch.to_yaml				: dumps YAML
+puts websearch.results[3].to_xml	: dumps XML for third search result
 
 == Installation
 
