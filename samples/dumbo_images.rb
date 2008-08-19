@@ -1,8 +1,10 @@
-require '../lib/bossman.rb'
+require 'rubygems'
+require 'bossman'
 
 include BOSSMan
 
-BOSSMan.application_id = "xXySTCfV34HiWg67Cwwym2mvf4tUfLJS3B73thD5ws_xFbLYh6uVvNJmBZDDCoByFRIY"
+APP_ID = "" #Replace with an actual YDN application ID
+BOSSMan.application_id = APP_ID 
 
 dumbo_images = BOSSMan::Search.images("brooklyn dumbo", 0, 2)
 

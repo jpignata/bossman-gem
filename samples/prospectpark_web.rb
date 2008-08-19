@@ -3,7 +3,8 @@ require 'bossman'
 
 include BOSSMan
 
-BOSSMan.application_id = "xXySTCfV34HiWg67Cwwym2mvf4tUfLJS3B73thD5ws_xFbLYh6uVvNJmBZDDCoByFRIY"
+APP_ID = "" #Replace with an actual YDN application ID
+BOSSMan.application_id = APP_ID 
 
 prospectpark_web = BOSSMan::Search.web("prospect park", 0, 20)
 
