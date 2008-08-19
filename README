@@ -4,6 +4,11 @@
 
 BOSSMan can be used to perform image, web and news searches against Yahoo's index. For more information about BOSS (Build your Own Search Service) please refer to http://developer.yahoo.com/search/boss/. 
 
+== Bugs, Features, Feedback
+
+Feedback would be really appreciated. You can send it to me at john.pignata@gmail.com -- tickets can
+be submitted by using Lighthouse: http://pignata.lighthouseapp.com/projects/15761-bossman
+
 == Example Usage
 
 === Web
