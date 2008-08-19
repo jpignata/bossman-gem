@@ -59,60 +59,67 @@ BOSSMan can be used to perform image, web and news searches against Yahoo's inde
 	
 == Output Objects
 
+Assuming an object returned called search:
+
+search = BOSSMan::Search.web("staten island", 0, 20)
+
 === Common
 
-.responsecode			: HTTP response code
-.nextpage				: REST URL to next page of search results
-.count					: Number of search results contained in response
-.start					: Search result from which output starts
-.totalhits				: De-duplicated total number of results search yielded
-.deephits				: Total number of results search yielded
-.results[].clickurl		: Tracking URL of result; must be used in user-facing anchor tags by BOSS TOU
-.results[].url			: URL of result
+search.responsecode				: HTTP response code
+search.nextpage					: REST URL to next page of search results
+search.count					: Number of search results contained in response
+search.start					: Search result from which output starts
+search.totalhits				: De-duplicated total number of results search yielded
+search.deephits					: Total number of results search yielded
+search.results[].clickurl		: Tracking URL of result; must be used in user-facing
+										anchor tags by BOSS TOU
+search.results[].url			: URL of result
 
 === Web
 
-.results[].abstract		: Description of result with keywords emboldened
-.results[].title		: Document title with keywords emboldened
-.results[].dispurl		: Display URL of result
-.results[].size			: Size of result in bytes
-.results[].date			: Date result was indexed
+search.results[].abstract		: Description of result with keywords emboldened
+search.results[].title			: Document title with keywords emboldened
+search.results[].dispurl		: Display URL of result
+search.results[].size			: Size of result in bytes
+search.results[].date			: Date result was indexed
 
 === News
 
-.results[].abstract		: Description of news story
-.results[].title		: Title of news story
-.results[].language		: Language of news story
-.results[].date			: Last publication date of news story
-.results[].time			: Last publication time of news story
-.results[].source		: Source of news story
-.results[].sourceurl	: URL of source publication
+search.results[].abstract		: Description of news story
+search.results[].title			: Title of news story
+search.results[].language		: Language of news story
+search.results[].date			: Last publication date of news story
+search.results[].time			: Last publication time of news story
+search.results[].source			: Source of news story
+search.results[].sourceurl		: URL of source publication
 
 === Images
 
-.results[].abstract			: Description of image
-.results[].filename			: Filename of image
-.results[].size				: Size of image
-.results[].format			: Format of image
-.results[].height			: Height of full-size image
-.results[].date				: Last modification date of image (YYYY/MM/DD)
-.results[].mimetype			: MIME type of image
-.results[].refererclickurl	: Link to page where image was found
-.results[].refererurl 		: Link to page where image was found
-.results[].title			: Title of image (usually the filename)
-.results[].width			: Width of full-size image
-.results[].thumbnailurl		: URL of thumbnail image
-.results[].thumbnail_height : Height of thumbnail image
-.results[].thumbnail_width  : Width of thumbnail image
+search.results[].abstract			: Description of image
+search.results[].filename			: Filename of image
+search.results[].size				: Size of image
+search.results[].format				: Format of image
+search.results[].height				: Height of full-size image
+search.results[].date				: Last modification date of image (YYYY/MM/DD)
+search.results[].mimetype			: MIME type of image
+search.results[].refererclickurl	: Link to page where image was found
+search.results[].refererurl 		: Link to page where image was found
+search.results[].title				: Title of image (usually the filename)
+search.results[].width				: Width of full-size image
+search.results[].thumbnailurl		: URL of thumbnail image
+search.results[].thumbnail_height	: Height of thumbnail image
+search.results[].thumbnail_width    : Width of thumbnail image
 
-=== Format
+=== Raw dump formats
 
-Results are dumpable in JSON, XML and YAML by use of to_json, to_xml (or to_s), to_yaml respectively.
+Resultsets are returnable in JSON, XML and YAML by use of to_json, to_xml (or to_s), to_yaml respectively.
 
-puts websearch			 		: dumps XML 
-puts websearch.to_json	 		: dumps JSON
-puts websearch.to_yaml			: dumps YAML
-puts websearch.results[3]		: dumps XML for one search result
+search			 			: dumps XML of entire resultset
+search.to_json	 			: dumps JSON of entire resultset
+search.to_yaml				: dumps YAML of entire resultset
+search.results[3]			: dumps XML of one search result
+search.results[3].to_json	: dumps JSON of one search result
+search.results[3].to_yaml	: dumps YAML of one search result
 
 == Installation
 
