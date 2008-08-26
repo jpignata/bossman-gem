@@ -11,6 +11,5 @@ module BOSSMan
     end
 
     alias to_s to_xml
-    
   end
 end

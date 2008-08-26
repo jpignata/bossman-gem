@@ -14,12 +14,19 @@ module BOSSMan
         end        
       end
     end
-          
+              
     def to_xml
       @response['ysearchresponse'].to_xml(:root => 'resultset')
     end
-
+    
+    def _dump(level)
+      @response.to_json
+    end
+    
+    def self._load(string)
+      ResultSet.new(ActiveSupport::JSON.decode(string))
+    end
+    
     alias to_s to_xml
-
   end  
 end
