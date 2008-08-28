@@ -1,3 +1,6 @@
+require 'net/http'
+require 'uri'
+
 module BOSSMan
   class REST
         
