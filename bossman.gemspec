@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name = "bossman"
-  s.version = "0.1.0"
-  s.date = "2008-08-27"
+  s.version = "0.1.1"
+  s.date = "2008-08-28"
   s.summary = "Class for interaction with the Yahoo BOSS web service."
   s.email = "jpignata@waterfrontmedia.com"
   s.homepage = "http://github.com/jpignata/bossman-gem"
