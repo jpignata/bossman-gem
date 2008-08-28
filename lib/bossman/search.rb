@@ -1,43 +1,38 @@
 module BOSSMan
   class Search 
     class << self
-
-      def web(query, start=0, count=10, filter=nil, type=nil, lang=nil, region=nil)    
+      DEFAULT_COUNT = 10
+      DEFAULT_START = 0
+      
+      def web(query, options = {})    
         method = "web"
-
-        options = default_options(BOSSMan.application_id, count, start)
-        options[:filter] = filter if filter
-        options[:type] = type if type
-        options[:lang] = lang if lang
-        options[:region] = region if region
-
+        options.merge!(return_options(options))
         return REST.get(method, query, options)
       end
 
-      def images(query, start=0, count=10, filter=nil, dimensions=nil, refererurl=nil, url=nil)
+      def images(query, options = {})
         method = "images"
-
-        options = default_options(BOSSMan.application_id, count, start)
-        options[:filter] = filter if filter
-        options[:dimensions] = dimensions if dimensions
-        options[:refererurl] = refererurl if refererurl
-        options[:url] = url if url
-
+        options.merge!(return_options(options))        
         return REST.get(method, query, options)
       end
 
-      def news(query, start=0, count=10, age=nil)
+      def news(query, options = {})
         method = "news"
-
-        options = default_options(BOSSMan.application_id, count, start)
-        options[:age] = age if age
-
+        options.merge!(return_options(options))
         return REST.get(method, query, options)
       end
 
-      private    
-      def default_options(appid, count, start)
-        return {:appid => appid, :count => count, :start => start}
+      def spelling(query, options = {})
+        method = "spelling"
+        options.merge!(return_options(options))
+        return REST.get(method, query, options)
+      end
+      
+      private
+      def return_options(options)
+        count = options[:count] ? options[:count] : DEFAULT_COUNT
+        start = options[:start] ? options[:start] : DEFAULT_START
+        return {:appid => BOSSMan.application_id, :count => count, :start => start }
       end
 
     end

@@ -5,7 +5,9 @@ module BOSSMan
       @response = response
 
       @response["ysearchresponse"].each do |key, value|
-        if key.include? "resultset"
+        if key.include? "resultset_spell"
+          set_parameter("suggestion", @response["ysearchresponse"]["resultset_spell"][0]["suggestion"])
+        elsif key.include? "resultset"
           results = Array.new
           response["ysearchresponse"][key].each { |result| results << Result.new(result) }
           set_parameter("results", results)
