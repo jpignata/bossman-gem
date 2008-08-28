@@ -19,12 +19,12 @@ be submitted by using Lighthouse: http://pignata.lighthouseapp.com/projects/1576
 
 	BOSSMan.application_id = <Your Application ID>
 
-	return = BOSSMan::Search.web("prospect park", { :count => 5, :filter => "-hate" })
+	boss = BOSSMan::Search.web("prospect park", { :count => 5, :filter => "-hate" })
 
-	puts "Number of results: #{return.totalhits}"
+	puts "Number of results: #{boss.totalhits}"
 	puts
 
-	return.results.each do |result|
+	boss.results.each do |result|
 	  puts "#{result.title}"
 	  puts "-" * 80
 	  puts "#{result.abstract}"
@@ -39,9 +39,9 @@ be submitted by using Lighthouse: http://pignata.lighthouseapp.com/projects/1576
 
 	BOSSMan.application_id = <Your Application ID>
 
-	return = BOSSMan::Search.news("brooklyn new york", { :age => "7d" })
+	boss = BOSSMan::Search.news("brooklyn new york", { :age => "7d" })
 
-	return.results.each do |result|
+	boss.results.each do |result|
 	  puts "#{result.title} [from #{result.source}]"
 	  puts "-" * 80
 	  puts "#{result.abstract}"
@@ -55,9 +55,9 @@ be submitted by using Lighthouse: http://pignata.lighthouseapp.com/projects/1576
 
 	BOSSMan.application_id = <Your Application ID>
 
-	dumbo = BOSSMan::Search.images("brooklyn dumbo", { :dimensions => "large" })
+	boss = BOSSMan::Search.images("brooklyn dumbo", { :dimensions => "large" })
 
-	return.results.each do |result|
+	boss.results.each do |result|
 	  puts "#{result.url}: #{result.abstract}"
 	end
 	
@@ -69,13 +69,13 @@ be submitted by using Lighthouse: http://pignata.lighthouseapp.com/projects/1576
 	
 	BOSSMan.application_id = <Your Application ID>
 	
-	return = BOSSMan::Search.spelling("Diabretes")
+	boss = BOSSMan::Search.spelling("Diabretes")
 	
-	puts result.suggestion
+	puts boss.suggestion
 	
 == Output Objects
 
-Assuming an object returned called search:
+Assuming an object bossed called search:
 
 search = BOSSMan::Search.web("staten island", 0, 20)
 
