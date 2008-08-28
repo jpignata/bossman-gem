@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'active_support'
 
-Dir["#{File.dirname(__FILE__)}/bossman/*.rb"].each { |bossman_lib| require bossman_lib }
+Dir["#{File.dirname(__FILE__)}/bossman/*.rb"].sort.each { |bossman_lib| require bossman_lib }
 
 module BOSSMan
   API_VERSION = :v1
