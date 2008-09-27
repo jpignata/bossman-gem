@@ -8,6 +8,7 @@ module BOSSMan
   API_BASEURI = "http://boss.yahooapis.com/ysearch"
 
   attr_accessor :application_id
+  module_function :application_id=, :application_id
 
   class MissingConfiguration < StandardError; end
   class InvalidParameter < StandardError; end
