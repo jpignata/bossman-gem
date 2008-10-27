@@ -1,6 +1,19 @@
 Loaded suite /usr/bin/rcov
 Started
 .............
-Finished in 4.347529 seconds.
+Finished in 2.582204 seconds.
 
 13 tests, 16 assertions, 0 failures, 0 errors
++----------------------------------------------------+-------+-------+--------+
+|                  File                              | Lines |  LOC  |  COV   |
++----------------------------------------------------+-------+-------+--------+
+|lib/bossman.rb                                      |    18 |    14 | 100.0% |
+|lib/bossman/basevalueobject.rb                      |    18 |    14 | 100.0% |
+|lib/bossman/rest.rb                                 |    41 |    34 | 100.0% |
+|lib/bossman/result.rb                               |    15 |    12 | 100.0% |
+|lib/bossman/resultset.rb                            |    42 |    36 |  94.4% |
+|lib/bossman/search.rb                               |    40 |    34 |  88.2% |
++----------------------------------------------------+-------+-------+--------+
+|Total                                               |   174 |   144 |  95.8% |
++----------------------------------------------------+-------+-------+--------+
+95.8%   6 file(s)   174 Lines   144 LOC
