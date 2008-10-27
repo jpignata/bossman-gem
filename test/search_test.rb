@@ -19,6 +19,18 @@ class TestWeb < Test::Unit::TestCase
     assert_instance_of(BOSSMan::Result, search.results[0], "Result not an instance of BOSSMan::Result")
   end
   
+  def test_news_search
+    BOSSMan.application_id = 'xXySTCfV34HiWg67Cwwym2mvf4tUfLJS3B73thD5ws_xFbLYh6uVvNJmBZDDCoByFRIY'
+    search = BOSSMan::Search.news('"brooklyn"', { :count => 7 } )
+    assert_equal(search.count, "7", "News search did not return the correct number of results.")
+  end
+  
+  def test_news_search
+    BOSSMan.application_id = 'xXySTCfV34HiWg67Cwwym2mvf4tUfLJS3B73thD5ws_xFbLYh6uVvNJmBZDDCoByFRIY'
+    search = BOSSMan::Search.images('"bridge"', { :count => 7 } )
+    assert_equal(search.count, "7", "Image search did not return the correct number of results.")
+  end
+  
   def test_yaml_output
     BOSSMan.application_id = 'xXySTCfV34HiWg67Cwwym2mvf4tUfLJS3B73thD5ws_xFbLYh6uVvNJmBZDDCoByFRIY'
     search = BOSSMan::Search.web("Revolution Health")
@@ -31,4 +43,15 @@ class TestWeb < Test::Unit::TestCase
     assert_match(/\{"ysearchresponse":/, search.to_json, "to_json not returning proper JSON")
   end
   
+  def test_resultset_toxml
+    BOSSMan.application_id = 'xXySTCfV34HiWg67Cwwym2mvf4tUfLJS3B73thD5ws_xFbLYh6uVvNJmBZDDCoByFRIY'
+    search = BOSSMan::Search.web("Revolution Health")
+    assert_match(/\<resultset-web\>/, search.to_xml, "Resultset to xml did not return XML")
+  end
+
+  def test_result_toxml
+    BOSSMan.application_id = 'xXySTCfV34HiWg67Cwwym2mvf4tUfLJS3B73thD5ws_xFbLYh6uVvNJmBZDDCoByFRIY'
+    search = BOSSMan::Search.web("Revolution Health")
+    assert_match(/\<title\>/, search.results[0].to_xml, "Resultset to xml did not return XML")
+  end
 end
