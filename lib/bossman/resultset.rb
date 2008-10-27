@@ -9,7 +9,15 @@ module BOSSMan
           set_parameter("suggestion", @response["ysearchresponse"]["resultset_spell"][0]["suggestion"])
         elsif key.include? "resultset"
           results = Array.new
-          response["ysearchresponse"][key].each { |result| results << Result.new(result) }
+          response["ysearchresponse"][key].each { |result| 
+            begin
+              result = Result.new(result) 
+            rescue
+              next
+            else
+              results << result
+            end
+          }
           set_parameter("results", results)
         else
           set_parameter(key, value)
