@@ -146,7 +146,7 @@ jp@populuxe:~/code/ruby$ gem install jpignata-bossman
 
 ## Requirements
 
-* Active Support >= 2.1
+- Active Support >= 2.1
 
 ## LICENSE:
 
