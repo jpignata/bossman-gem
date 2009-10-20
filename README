@@ -13,7 +13,6 @@ be submitted by using Lighthouse: http://pignata.lighthouseapp.com/projects/1576
 
 === Web
 
-	require 'rubygems'
 	require 'bossman'
 	include BOSSMan
 
@@ -33,7 +32,6 @@ be submitted by using Lighthouse: http://pignata.lighthouseapp.com/projects/1576
 
 === News
 
-	require 'rubygems'
 	require 'bossman'
 	include BOSSMan
 
@@ -49,7 +47,6 @@ be submitted by using Lighthouse: http://pignata.lighthouseapp.com/projects/1576
 		
 === Images
 
-	require 'rubygems'
 	require 'bossman'
 	include BOSSMan
 
@@ -63,7 +60,6 @@ be submitted by using Lighthouse: http://pignata.lighthouseapp.com/projects/1576
 	
 === Spelling
 
-	require 'rubygems'
 	require 'bossman'
 	include BOSSMan
 	
