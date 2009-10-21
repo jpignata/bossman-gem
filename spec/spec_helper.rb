@@ -13,7 +13,7 @@ def boss_search(method, query, options = {})
 end
 
 def set_boss_api_key
-  BOSSMan.application_id = 'xXySTCfV34HiWg67Cwwym2mvf4tUfLJS3B73thD5ws_xFbLYh6uVvNJmBZDDCoByFRIY'
+  BOSSMan.application_id = 'fake_key'
 end
 
 def register_fakeweb(method, query, options = {})
