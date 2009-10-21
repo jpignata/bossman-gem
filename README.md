@@ -60,8 +60,24 @@ Tickets can be submitted by using GitHub issues.
     boss.suggestion 
 
     => Diabetes
-	
-## Output Objects
+    
+### BOSS Site Explorer   
+
+#### se_inlink can be used to query Yahoo for sites that link to a given URL:
+
+    links = Search.se_inlink("www.wnyc.com")
+	  links.results.map { |result| result.url }
+	  
+	  => ["http://www.wnyc.org/", "http://www.onthemedia.org/", "http://www.wnyc.org/shows/radiolab/", "http://cityroom.blogs.nytimes.com/2008/01/22/actor-heath-ledger-is-found-dead", "http://www.streetsblog.org/", "http://cityroom.blogs.nytimes.com/", "http://www.notmuch.com/", "http://www.williams-syndrome.org/", "http://www.manhattancc.org/", "http://scienceblogs.com/grrlscientist/"]
+
+#### se_pagedata will return a list of pages underneath a given subdomain:
+
+    pages = Search.se_inlink("www.wnyc.com")
+    pages.results.map { |result| result.url }
+
+    => ["http://www.webmd.com/", "http://www.webmd.com/allergies", "http://www.webmd.com/a-to-z-guides/temporomandibular-disorders", "http://www.webmd.com/oral-health/dental-crowns", "http://www.webmd.com/oral-health/dental-health-bridges", "http://www.webmd.com/oral-health/dental-implants", "http://www.webmd.com/oral-health/guide/canker-sores", "http://www.webmd.com/oral-health/guide/teeth-grinding-bruxism", "http://www.webmd.com/oral-health/guide/gingivitis-periodontal-disease", "http://www.webmd.com/oral-health/guide/plaque-and-your-teeth"]
+
+## Output Properties
 
 ### Common
 
@@ -73,19 +89,17 @@ Tickets can be submitted by using GitHub issues.
 - search.deephits             : Total number of results search yielded
 - search.results[].clickurl   : Tracking URL of result; must be used in user-facing anchor tags by BOSS TOU
 - search.results[].url			  : URL of result
+- search.results[].title      : Title of item
+- search.results[].abstract   : Description of item
 
 ### Web
 
-- search.results[].abstract   : Description of result with keywords emboldened
-- search.results[].title      : Document title with keywords emboldened
 - search.results[].dispurl    : Display URL of result
 - search.results[].size       : Size of result in bytes
 - search.results[].date       : Date result was indexed
 
 ### News
 
-- search.results[].abstract   : Description of news story
-- search.results[].title      : Title of news story
 - search.results[].language   : Language of news story
 - search.results[].date       : Last publication date of news story
 - search.results[].time       : Last publication time of news story
@@ -94,7 +108,6 @@ Tickets can be submitted by using GitHub issues.
 
 ### Images
 
-- search.results[].abstract		    	: Description of image
 - search.results[].filename		    	: Filename of image
 - search.results[].size				      : Size of image
 - search.results[].format			    	: Format of image
@@ -103,7 +116,6 @@ Tickets can be submitted by using GitHub issues.
 - search.results[].mimetype			    : MIME type of image
 - search.results[].refererclickurl	: Link to page where image was found
 - search.results[].refererurl 		  : Link to page where image was found
-- search.results[].title				    : Title of image (usually the filename)
 - search.results[].width				    : Width of full-size image
 - search.results[].thumbnail_url		: URL of thumbnail image
 - search.results[].thumbnail_height	: Height of thumbnail image
