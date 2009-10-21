@@ -4,7 +4,7 @@
 
 BOSSMan can be used to perform image, web and news searches against Yahoo's index. For more information about BOSS (Build your Own Search Service) please refer to http://developer.yahoo.com/search/boss/. 
 
-This is an older project - these days I'd probably use HTTParty (http://github.com/jnunemaker/httparty) if I needed to access BOSS or other similar web services. 
+This is an older project - I'd encourage look at the great HTTParty (http://github.com/jnunemaker/httparty) library if you need to quickly and easily access HTTP resources.
 
 ## Bugs, Features, Feedback
 
@@ -21,7 +21,7 @@ Tickets can be submitted by using GitHub issues.
 
 ### Web
 
-    boss = BOSSMan::Search.web("prospect park", { :count => 5, :filter => "-hate" })
+    boss = Search.web("prospect park", :count => 5, :filter => "-hate")
     
     puts Matches:
     puts
@@ -38,7 +38,7 @@ Tickets can be submitted by using GitHub issues.
 
 ### News
 
-    boss = BOSSMan::Search.news("brooklyn new york", { :age => "1h" })
+    boss = Search.news("brooklyn new york", :age => "1h")
     puts boss.results.first.title
     puts "-" * 80
     puts boss.results.first.abstract
@@ -49,14 +49,14 @@ Tickets can be submitted by using GitHub issues.
 		
 ### Images
 
-    boss = BOSSMan::Search.images("brooklyn dumbo", { :dimensions => "large" })
+    boss = Search.images("brooklyn dumbo", :dimensions => "large")
     boss.results.map { |result| result.url }
 
     => ["http://static.flickr.com/71/216529430_bf36a6c40b.jpg", "http://static.flickr.com/3215/2771873360_7cf2d7e572.jpg", "http://static.flickr.com/149/360481219_3ab59470cc.jpg", "http://static.flickr.com/3136/2768629082_bc0dcb76a3.jpg", "http://www.wirednewyork.com/brooklyn/dumbo/dumbo_brooklyn_bridge_3march02.jpg", "http://www.wirednewyork.com/brooklyn/dumbo/dumbo_brooklyn_bridge_plymouth_4july03.jpg", "http://static.flickr.com/3611/3538565901_f81eb52825.jpg", "http://static.flickr.com/2145/3539377152_1fd629db12.jpg", "http://static.flickr.com/2082/2340123052_fb8afe43b6.jpg", "http://static.flickr.com/3617/3508763096_ec8c53c061.jpg"]
   
 ### Spelling
 
-    boss = BOSSMan::Search.spelling("Diabretes")
+    boss = Search.spelling("Diabretes")
     boss.suggestion 
 
     => Diabetes
@@ -113,14 +113,14 @@ Tickets can be submitted by using GitHub issues.
 
 - search.suggestion					        : Returns spelling suggestion from BOSS
 
-### Raw dump formats
+### Other formats
 
 Result sets can be dumped as JSON, XML and YAML by use of to_json, to_xml, to_yaml respectively.
 
 - search.to_xml			          : dumps XML of the result set
 - search.to_json	 			      : dumps JSON of the result set
 - search.to_yaml				      : dumps YAML of the result set
-- search.results[3]			      : dumps XML of one search result
+- search.results[3].to_xml    : dumps XML of one search result
 - search.results[3].to_json 	: dumps JSON of one search result
 - search.results[3].to_yaml	  : dumps YAML of one search result
 
