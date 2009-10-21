@@ -32,5 +32,5 @@ def boss_url(method, query, options = {})
 end
 
 def fakeweb_file(method, query)
-  "#{File.dirname(__FILE__)}/support/fakeweb/#{method}.#{query.gsub(" ", "_")}.json"
+  "#{File.dirname(__FILE__)}/support/fakeweb/#{method}.#{query.gsub(/[ \.]/, "_")}.json"
 end

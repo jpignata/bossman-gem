@@ -127,6 +127,30 @@ describe "BOSSMan" do
     end
   end
   
+  context "Inlink Search" do
+    before(:all) do
+      include BOSSMan
+      set_boss_api_key
+      @result = boss_search("se_inlink", "www.rubyonrails.org").results[2]
+    end
+  
+    it "contains a description of each site linking to the site in the query" do
+      @result.abstract.should match(/Personal weblog for David Heinemeier Hansson/)
+    end
+    
+    it "contains a click URL for each site linking to the site in the query" do
+      @result.clickurl.should match(/lrd.yahooapis.com/)
+    end
+
+    it "contains a URL for each site linking to the site in the query" do
+      @result.url.should == "http://www.loudthinking.com/"
+    end
+    
+    it "contains a title for each site linking to the site in the query" do
+      @result.title.should == "Loud Thinking by David Heinemeier Hansson"
+    end
+  end
+  
   context "Image Search" do
     before(:all) do
       include BOSSMan
@@ -189,6 +213,7 @@ describe "BOSSMan" do
     it "contains a thumbnail image width for each result" do
       @result.thumbnail_width.should == "130"
     end
+          
   end
 end
 

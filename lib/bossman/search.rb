@@ -2,11 +2,11 @@ module BOSSMan
   class Search 
     DEFAULT_COUNT = 10
     DEFAULT_START = 0
-
+    VALID_METHODS = [:web, :images, :news, :spelling, :se_inlink]
     class << self
       def method_missing(*args)
         method, query, options = args
-        super unless [:web, :images, :news, :spelling].include?(method)
+        super unless VALID_METHODS.include?(method)
         options = {} if options.nil?
         boss = BOSS.new(method, query, options_defaults.merge!(options))
         boss.get
