@@ -1,6 +1,8 @@
+$: << File.join(File.dirname(__FILE__), "/../lib")
+
 require 'spec'
 require 'fakeweb'
-require '../lib/bossman.rb'
+require 'bossman'
 
 FakeWeb.allow_net_connect = false
 
@@ -15,7 +17,7 @@ end
 
 def register_fakeweb(method, query, options = {})
   uri = boss_url(method, query, options)
-  FakeWeb.register_uri(:any, uri, :body => "support/fakeweb/#{method}.#{query}.json")
+  FakeWeb.register_uri(:any, uri, :body => "#{File.dirname(__FILE__)}/support/fakeweb/#{method}.#{query}.json")
 end
 
 def boss_url(method, query, options = {})
