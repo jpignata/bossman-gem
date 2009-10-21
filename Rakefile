@@ -6,8 +6,8 @@ task :default => [:spec]
 
 spec = Gem::Specification.new do |s|
   s.name      = "bossman"
-  s.version   = "0.2.7"
-  s.date      = "2009-08-20"
+  s.version   = "0.3.0"
+  s.date      = "2009-08-21"
   s.summary   = "Gem for interaction with the Yahoo BOSS web service."
   s.email     = "john.pignata@gmail.com"
   s.homepage  = "http://github.com/jpignata/bossman-gem"
