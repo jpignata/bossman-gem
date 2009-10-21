@@ -14,28 +14,27 @@ Tickets can be submitted by using GitHub issues.
 
 ### Setup
 
-  require 'bossman'
-  include BOSSMan
+    require 'bossman'
+    include BOSSMan
 
-  BOSSMan.application_id = <Your Application ID>
+    BOSSMan.application_id = [Your Application ID]
 
 ### Web
 
-	boss = BOSSMan::Search.web("prospect park", { :count => 5, :filter => "-hate" })
+	  boss = BOSSMan::Search.web("prospect park", { :count => 5, :filter => "-hate" })
 
-  puts Matches:
-  puts
+    puts Matches:
+    puts
   
-	boss.results.each { |result| puts "#{result.title} [#{result.url}]" }
+	  boss.results.each { |result| puts "#{result.title} [#{result.url}]" }
 
-  => Matches:
+    => Matches:
 
-  <b>Prospect</b> <b>Park</b> Alliance [http://www.prospectpark.org/]
-  <b>Prospect</b> <b>Park</b> (Brooklyn) - Wikipedia, the free encyclopedia [http://en.wikipedia.org/wiki/Prospect_Park_(Brooklyn)]
-  About <b>Prospect</b> <b>Park</b> [http://www.prospectpark.org/about]
-  <b>Prospect</b> <b>Park</b> Zoo [http://www.prospectparkzoo.com/]
-  <b>Prospect</b> <b>Park</b> [http://www.prospectpark.net/]
-  
+    <b>Prospect</b> <b>Park</b> Alliance [http://www.prospectpark.org/]
+    <b>Prospect</b> <b>Park</b> (Brooklyn) - Wikipedia, the free encyclopedia [http://en.wikipedia.org/wiki/Prospect_Park_(Brooklyn)]
+    About <b>Prospect</b> <b>Park</b> [http://www.prospectpark.org/about]
+    <b>Prospect</b> <b>Park</b> Zoo [http://www.prospectparkzoo.com/]
+    <b>Prospect</b> <b>Park</b> [http://www.prospectpark.net/]  
 
 ### News
 
