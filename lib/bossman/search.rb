@@ -2,7 +2,8 @@ module BOSSMan
   class Search 
     DEFAULT_COUNT = 10
     DEFAULT_START = 0
-    VALID_METHODS = [:web, :images, :news, :spelling, :se_inlink]
+    VALID_METHODS = [:web, :images, :news, :spelling, :se_inlink, :se_pagedata]
+    
     class << self
       def method_missing(*args)
         method, query, options = args

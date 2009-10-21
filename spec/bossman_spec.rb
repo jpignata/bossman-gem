@@ -1,7 +1,7 @@
 require File.join(File.dirname(__FILE__), "/spec_helper")
 
 describe "BOSSMan" do
-  context "Search Results" do     
+  context "Search results" do     
     before(:all) do
       include BOSSMan
       set_boss_api_key
@@ -51,7 +51,7 @@ describe "BOSSMan" do
     end     
   end
   
-  context "Spelling Suggestion" do
+  context "Spelling suggestion search" do
     before(:all) do
       include BOSSMan
       set_boss_api_key
@@ -63,7 +63,7 @@ describe "BOSSMan" do
     end
   end
   
-  context "News Search" do
+  context "News search" do
     before(:all) do
       include BOSSMan
       set_boss_api_key
@@ -99,7 +99,7 @@ describe "BOSSMan" do
     end    
   end
   
-  context "Web Search" do
+  context "Web search" do
     before(:all) do
       include BOSSMan
       set_boss_api_key
@@ -127,7 +127,7 @@ describe "BOSSMan" do
     end
   end
   
-  context "Inlink Search" do
+  context "Inlink search" do
     before(:all) do
       include BOSSMan
       set_boss_api_key
@@ -150,8 +150,32 @@ describe "BOSSMan" do
       @result.title.should == "Loud Thinking by David Heinemeier Hansson"
     end
   end
+
+  context "Page data search" do
+    before(:all) do
+      include BOSSMan
+      set_boss_api_key
+      @result = boss_search("se_pagedata", "www.wnyc.org").results.last
+    end
   
-  context "Image Search" do
+    it "contains a description of each site linking to the site in the query" do
+      @result.abstract.should match(/The Brian Lehrer Show/)
+    end
+    
+    it "contains a click URL for each site linking to the site in the query" do
+      @result.clickurl.should match(/lrd.yahooapis.com/)
+    end
+
+    it "contains a URL for each site linking to the site in the query" do
+      @result.url.should == "http://www.wnyc.org/shows/radiolab/episodes/2008/11/14"
+    end
+    
+    it "contains a title for each site linking to the site in the query" do
+      @result.title.should == "WNYC - Radiolab: Choice (November 14, 2008)"
+    end
+  end
+  
+  context "Image search" do
     before(:all) do
       include BOSSMan
       set_boss_api_key
