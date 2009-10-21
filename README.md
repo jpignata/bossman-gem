@@ -81,11 +81,9 @@ search = BOSSMan::Search.web("cobble hill", 0, 20)
 - search.nextpage             : REST URL to next page of search results
 - search.count                : Number of search results contained in response
 - search.start                : Search result from which output starts
-- search.totalhits            : De-duplicated total number of results search
-                                yielded
+- search.totalhits            : De-duplicated total number of results search yielded
 - search.deephits             : Total number of results search yielded
-- search.results[].clickurl   : Tracking URL of result; must be used in
-                                user-facing anchor tags by BOSS TOU
+- search.results[].clickurl   : Tracking URL of result; must be used in user-facing anchor tags by BOSS TOU
 - search.results[].url			  : URL of result
 
 ### Web
@@ -113,14 +111,13 @@ search = BOSSMan::Search.web("cobble hill", 0, 20)
 - search.results[].size				      : Size of image
 - search.results[].format			    	: Format of image
 - search.results[].height			    	: Height of full-size image
-- search.results[].date			  	    : Last modification date of image 
-                                      (yyyy/mm/dd)
+- search.results[].date			  	    : Last modification date of image (yyyy/mm/dd)
 - search.results[].mimetype			    : MIME type of image
 - search.results[].refererclickurl	: Link to page where image was found
 - search.results[].refererurl 		  : Link to page where image was found
 - search.results[].title				    : Title of image (usually the filename)
 - search.results[].width				    : Width of full-size image
-- search.results[].thumbnailurl		  : URL of thumbnail image
+- search.results[].thumbnail_url		  : URL of thumbnail image
 - search.results[].thumbnail_height	: Height of thumbnail image
 - search.results[].thumbnail_width  : Width of thumbnail image
 
@@ -130,11 +127,11 @@ search = BOSSMan::Search.web("cobble hill", 0, 20)
 
 ### Raw dump formats
 
-Result sets can be dumped as JSON, XML and YAML by use of to_json, to_xml (or to_s), to_yaml respectively.
+Result sets can be dumped as JSON, XML and YAML by use of to_json, to_xml, to_yaml respectively.
 
-- search			 			          : dumps XML of entire resultset
-- search.to_json	 			      : dumps JSON of entire resultset
-- search.to_yaml				      : dumps YAML of entire resultset
+- search.to_xml			          : dumps XML of the result set
+- search.to_json	 			      : dumps JSON of the result set
+- search.to_yaml				      : dumps YAML of the result set
 - search.results[3]			      : dumps XML of one search result
 - search.results[3].to_json 	: dumps JSON of one search result
 - search.results[3].to_yaml	  : dumps YAML of one search result
