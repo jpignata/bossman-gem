@@ -6,7 +6,7 @@ task :default => [:spec]
 
 spec = Gem::Specification.new do |s|
   s.name      = "bossman"
-  s.version   = "0.2.0"
+  s.version   = "0.2.5"
   s.date      = "2009-08-20"
   s.summary   = "Gem for interaction with the Yahoo BOSS web service."
   s.email     = "john.pignata@gmail.com"
