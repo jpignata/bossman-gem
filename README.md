@@ -8,7 +8,7 @@ This is an older project - I'd encourage you to look at the great HTTParty (http
 
 ## Bugs, Features, Feedback
 
-Tickets can be submitted by using GitHub issues.
+Tickets can be submitted by via GitHub issues.
 
 ## Example Usage
 
@@ -72,7 +72,7 @@ Tickets can be submitted by using GitHub issues.
 
 #### se_pagedata will return a list of pages underneath a given subdomain:
 
-    pages = Search.se_inlink("www.wnyc.com")
+    pages = Search.se_inlink("www.webmd.com")
     pages.results.map { |result| result.url }
 
     => ["http://www.webmd.com/", "http://www.webmd.com/allergies", "http://www.webmd.com/a-to-z-guides/temporomandibular-disorders", "http://www.webmd.com/oral-health/dental-crowns", "http://www.webmd.com/oral-health/dental-health-bridges", "http://www.webmd.com/oral-health/dental-implants", "http://www.webmd.com/oral-health/guide/canker-sores", "http://www.webmd.com/oral-health/guide/teeth-grinding-bruxism", "http://www.webmd.com/oral-health/guide/gingivitis-periodontal-disease", "http://www.webmd.com/oral-health/guide/plaque-and-your-teeth"]
@@ -151,7 +151,7 @@ Result sets can be dumped as JSON, XML and YAML by use of to_json, to_xml, to_ya
 
 (The MIT License)
 
-Copyright (c) 2008 Jay Pignata
+Copyright (c) 2009 Jay Pignata
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
