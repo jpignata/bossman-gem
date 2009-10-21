@@ -23,7 +23,7 @@ Tickets can be submitted by using GitHub issues.
 
     boss = Search.web("prospect park", :count => 5, :filter => "-hate")
     
-    puts Matches:
+    puts "Matches:"
     puts
     
     boss.results.each { |result| puts "#{result.title} [#{result.url}]" }
