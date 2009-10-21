@@ -2,7 +2,6 @@ require 'active_support'
 require 'net/http'
 require 'uri'
 
-
 Dir["#{File.dirname(__FILE__)}/bossman/*.rb"].sort.each { |bossman_lib| require bossman_lib }
 
 module BOSSMan

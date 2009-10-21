@@ -1,40 +1,22 @@
 module BOSSMan
   class Search 
+    DEFAULT_COUNT = 10
+    DEFAULT_START = 0
+
     class << self
-      DEFAULT_COUNT = 10
-      DEFAULT_START = 0
-      
-      def web(query, options = {})    
-        method = "web"
-        options.merge!(return_options(options))
-        return REST.get(method, query, options)
-      end
-
-      def images(query, options = {})
-        method = "images"
-        options.merge!(return_options(options))        
-        return REST.get(method, query, options)
-      end
-
-      def news(query, options = {})
-        method = "news"
-        options.merge!(return_options(options))
-        return REST.get(method, query, options)
-      end
-
-      def spelling(query, options = {})
-        method = "spelling"
-        options.merge!(return_options(options))
-        return REST.get(method, query, options)
+      def method_missing(*args)
+        method, query, options = args
+        super unless [:web, :images, :news, :spelling].include?(method)
+        options.merge!(merge_options_with_defaults(options))
+        REST.get(method, query, options)
       end
       
       private
-      def return_options(options)
-        count = options[:count] ? options[:count] : DEFAULT_COUNT
-        start = options[:start] ? options[:start] : DEFAULT_START
-        return {:appid => BOSSMan.application_id, :count => count, :start => start }
-      end
-
+        def merge_options_with_defaults(options)
+          count = options[:count] ? options[:count] : DEFAULT_COUNT
+          start = options[:start] ? options[:start] : DEFAULT_START
+          {:appid => BOSSMan.application_id, :count => count, :start => start }
+        end
     end
   end
 end
