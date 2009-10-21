@@ -3,26 +3,7 @@ module BOSSMan
     
     def initialize(response)
       @response = response
-
-      @response["ysearchresponse"].each do |key, value|
-        if key.include? "resultset_spell"
-          set_parameter("suggestion", @response["ysearchresponse"]["resultset_spell"][0]["suggestion"])
-        elsif key.include? "resultset"
-          results = Array.new
-          response["ysearchresponse"][key].each { |result| 
-            begin
-              result = Result.new(result) 
-            rescue
-              next
-            else
-              results << result
-            end
-          }
-          set_parameter("results", results)
-        else
-          set_parameter(key, value)
-        end        
-      end
+      process_response
     end
               
     def to_xml
@@ -38,5 +19,31 @@ module BOSSMan
     end
     
     alias to_s to_xml
+    
+    private
+      def process_response
+        @response["ysearchresponse"].each do |key, value|
+          case key
+          when "resultset_spell"
+            process_spelling_result
+          when /resultset/
+            process_resultset(key)
+          else
+            set_parameter(key, value)
+          end        
+        end
+      end
+      
+      def process_spelling_result
+        set_parameter("suggestion", @response["ysearchresponse"]["resultset_spell"].first["suggestion"])
+      end
+      
+      def process_resultset(key)
+        results = @response["ysearchresponse"][key].map do |result| 
+          Result.new(result) 
+        end
+        
+        set_parameter("results", results)
+      end
   end  
 end
