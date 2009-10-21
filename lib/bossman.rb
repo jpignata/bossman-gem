@@ -8,11 +8,9 @@ Dir["#{File.dirname(__FILE__)}/bossman/*.rb"].sort.each { |bossman_lib| require 
 module BOSSMan
   API_VERSION = :v1
   API_BASEURI = "http://boss.yahooapis.com/ysearch"
-  
-  %w( application_id proxy_host proxy_port proxy_user proxy_pass ).each do |att|
-    attr_accessor att.to_sym
-    module_function att.to_sym, "#{att}=".to_sym
-  end
+
+  attr_accessor :application_id
+  module_function :application_id, :application_id=
 
   class MissingConfiguration < StandardError; end
   class InvalidParameter < StandardError; end
