@@ -12,8 +12,8 @@ spec = Gem::Specification.new do |s|
   s.email     = "john.pignata@gmail.com"
   s.homepage  = "http://github.com/jpignata/bossman-gem"
   s.authors   = ["Jay Pignata"]
-  s.files     = ['lib/bossman.rb', 'lib/bossman/basevalueobject.rb', 
-                  'lib/bossman/rest.rb', 'lib/bossman/result.rb', 'lib/bossman/resultset.rb', 
+  s.files     = ['lib/bossman.rb', 'lib/bossman/base_value_object.rb', 
+                  'lib/bossman/boss.rb', 'lib/bossman/result.rb', 'lib/bossman/result_set.rb', 
                   'lib/bossman/search.rb', 'README.md', 'LICENSE']
   s.has_rdoc  = false
   s.add_dependency("activesupport", [">= 2.1.0"])
