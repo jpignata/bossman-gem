@@ -7,16 +7,14 @@ module BOSSMan
       def method_missing(*args)
         method, query, options = args
         super unless [:web, :images, :news, :spelling].include?(method)
-        options.merge!(merge_options_with_defaults(options))
-        REST.get(method, query, options)
+        boss = BOSS.new(method, query, options_defaults.merge!(options))
+        boss.get
       end
-      
-      private
-        def merge_options_with_defaults(options)
-          count = options[:count] ? options[:count] : DEFAULT_COUNT
-          start = options[:start] ? options[:start] : DEFAULT_START
-          {:appid => BOSSMan.application_id, :count => count, :start => start }
-        end
     end
+
+    private
+      def self.options_defaults
+        {:appid => BOSSMan.application_id, :count => DEFAULT_COUNT, :start => DEFAULT_START }
+      end
   end
 end
