@@ -42,7 +42,7 @@ describe "BOSSMan" do
       @result.url.should == "http://www.wikipedia.org/"
     end
 
-    it "can be returned as a yaml document" do
+    it "can be returned as a YAML document" do
       YAML.load(@search.to_yaml)["ysearchresponse"].should be_an_instance_of(Hash)
     end
 
@@ -189,9 +189,6 @@ describe "BOSSMan" do
     it "contains a thumbnail image width for each result" do
       @result.thumbnail_width.should == "130"
     end
-
   end
-
-
 end
 
