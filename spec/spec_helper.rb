@@ -1,5 +1,6 @@
 $: << File.join(File.dirname(__FILE__), "/../lib")
 
+require 'uri'
 require 'spec'
 require 'fakeweb'
 require 'bossman'
@@ -17,7 +18,7 @@ end
 
 def register_fakeweb(method, query, options = {})
   uri = boss_url(method, query, options)
-  FakeWeb.register_uri(:any, uri, :body => "#{File.dirname(__FILE__)}/support/fakeweb/#{method}.#{query}.json")
+  FakeWeb.register_uri(:any, uri, :body => fakeweb_file(method, query))
 end
 
 def boss_url(method, query, options = {})
@@ -25,7 +26,11 @@ def boss_url(method, query, options = {})
   app_id = "appid=#{BOSSMan.application_id}"
   count = options.include?(:count) ? "count=#{options[:count]}" : "count=10"
   start = options.include?(:start) ? "start=#{options[:start]}" : "start=0"
-  query = "?#{app_id}&#{count}&#{start}"  
+  query = "#{app_id}&#{count}&#{start}"  
 
-  base_uri + query
+  URI.escape("#{base_uri}?#{query}")
+end
+
+def fakeweb_file(method, query)
+  "#{File.dirname(__FILE__)}/support/fakeweb/#{method}.#{query.gsub(" ", "_")}.json"
 end

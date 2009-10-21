@@ -34,14 +34,13 @@ describe "BOSSMan" do
       @search.results.should be_an_instance_of(Array)
     end  
     
-    it "contains a click url for each search result" do
+    it "contains a click URL for each search result" do
       @result.clickurl.should match(/lrd.yahooapis.com/)
     end
 
-    it "contains the original source url from which each search result was indexed" do
+    it "contains the original source URL from which each search result was indexed" do
       @result.url.should == "http://www.wikipedia.org/"
     end
-
   end
   
   context "Spelling Suggestion" do
@@ -87,9 +86,37 @@ describe "BOSSMan" do
       @result.source.should == "New York Post"
     end
 
-    it "contains the source url from which each news story was indexed" do
+    it "contains the source URL from which each news story was indexed" do
       @result.sourceurl.should == "http://www.nypost.com/"
     end    
+  end
+  
+  context "Web Search" do
+    before(:all) do
+      include BOSSMan
+      set_boss_api_key
+      @result = boss_search("web", "apollo 11").results[1]
+    end
+
+    it "contains a description for each result" do
+      @result.abstract.should match(/Hyperlinked article about the first manned lunar landing/)
+    end
+
+    it "contains a title for each result" do
+      @result.title.should == "<b>Apollo</b> <b>11</b> - Wikipedia"
+    end
+
+    it "contains a display URL for each result" do
+      @result.dispurl.should == "<b>en.wikipedia.org</b>/wiki/<wbr><b>Apollo</b>_<b>11</b>"
+    end
+
+    it "contains the size for each result" do
+      @result.size.should == "183978"
+    end
+
+    it "contains the date each result was last indexed" do
+      @result.date.should == "2009/10/19"
+    end
   end
 
 end
