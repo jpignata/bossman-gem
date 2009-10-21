@@ -126,9 +126,9 @@ Result sets can be dumped as JSON, XML and YAML by use of to_json, to_xml, to_ya
 
 ## Installation
 
-jp@populuxe:~/code/ruby$ gem install gemcutter
-jp@populuxe:~/code/ruby$ gem tumble
-jp@populuxe:~/code/ruby$ gem install bossman
+    jp@populuxe:~/code/ruby$ gem install gemcutter
+    jp@populuxe:~/code/ruby$ gem tumble
+    jp@populuxe:~/code/ruby$ gem install bossman
 
 ## Requirements
 
