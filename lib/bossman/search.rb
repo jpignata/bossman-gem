@@ -7,6 +7,7 @@ module BOSSMan
       def method_missing(*args)
         method, query, options = args
         super unless [:web, :images, :news, :spelling].include?(method)
+        options = {} if options.nil?
         boss = BOSS.new(method, query, options_defaults.merge!(options))
         boss.get
       end
