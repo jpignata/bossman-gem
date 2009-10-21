@@ -21,13 +21,13 @@ Tickets can be submitted by using GitHub issues.
 
 ### Web
 
-	  boss = BOSSMan::Search.web("prospect park", { :count => 5, :filter => "-hate" })
-
+    boss = BOSSMan::Search.web("prospect park", { :count => 5, :filter => "-hate" })
+    
     puts Matches:
     puts
-  
-	  boss.results.each { |result| puts "#{result.title} [#{result.url}]" }
-
+    
+    boss.results.each { |result| puts "#{result.title} [#{result.url}]" }
+        
     => Matches:
 
     <b>Prospect</b> <b>Park</b> Alliance [http://www.prospectpark.org/]
@@ -38,28 +38,28 @@ Tickets can be submitted by using GitHub issues.
 
 ### News
 
-	boss = BOSSMan::Search.news("brooklyn new york", { :age => "1h" })
-  puts boss.results.first.title
-  puts "-" * 80
-  puts boss.results.first.abstract
-
-  => Brooklyn Park Helps Homeless
-  --------------------------------------------------------------------------------
-  When people lose their homes, they often turn to shelters as a last resort. Now, the City of Broo...
+    boss = BOSSMan::Search.news("brooklyn new york", { :age => "1h" })
+    puts boss.results.first.title
+    puts "-" * 80
+    puts boss.results.first.abstract
+    
+    => Brooklyn Park Helps Homeless
+    --------------------------------------------------------------------------------
+    When people lose their homes, they often turn to shelters as a last resort. Now, the City of Broo...
 		
 ### Images
 
-	boss = BOSSMan::Search.images("brooklyn dumbo", { :dimensions => "large" })
-	boss.results.map { |result| result.url }
-	
-	=> ["http://static.flickr.com/71/216529430_bf36a6c40b.jpg", "http://static.flickr.com/3215/2771873360_7cf2d7e572.jpg", "http://static.flickr.com/149/360481219_3ab59470cc.jpg", "http://static.flickr.com/3136/2768629082_bc0dcb76a3.jpg", "http://www.wirednewyork.com/brooklyn/dumbo/dumbo_brooklyn_bridge_3march02.jpg", "http://www.wirednewyork.com/brooklyn/dumbo/dumbo_brooklyn_bridge_plymouth_4july03.jpg", "http://static.flickr.com/3611/3538565901_f81eb52825.jpg", "http://static.flickr.com/2145/3539377152_1fd629db12.jpg", "http://static.flickr.com/2082/2340123052_fb8afe43b6.jpg", "http://static.flickr.com/3617/3508763096_ec8c53c061.jpg"]
+    boss = BOSSMan::Search.images("brooklyn dumbo", { :dimensions => "large" })
+    boss.results.map { |result| result.url }
+
+    => ["http://static.flickr.com/71/216529430_bf36a6c40b.jpg", "http://static.flickr.com/3215/2771873360_7cf2d7e572.jpg", "http://static.flickr.com/149/360481219_3ab59470cc.jpg", "http://static.flickr.com/3136/2768629082_bc0dcb76a3.jpg", "http://www.wirednewyork.com/brooklyn/dumbo/dumbo_brooklyn_bridge_3march02.jpg", "http://www.wirednewyork.com/brooklyn/dumbo/dumbo_brooklyn_bridge_plymouth_4july03.jpg", "http://static.flickr.com/3611/3538565901_f81eb52825.jpg", "http://static.flickr.com/2145/3539377152_1fd629db12.jpg", "http://static.flickr.com/2082/2340123052_fb8afe43b6.jpg", "http://static.flickr.com/3617/3508763096_ec8c53c061.jpg"]
   
 ### Spelling
 
-	boss = BOSSMan::Search.spelling("Diabretes")
-	boss.suggestion 
-	
-	=> Diabetes
+    boss = BOSSMan::Search.spelling("Diabretes")
+    boss.suggestion 
+
+    => Diabetes
 	
 ## Output Objects
 
