@@ -4,76 +4,65 @@
 
 BOSSMan can be used to perform image, web and news searches against Yahoo's index. For more information about BOSS (Build your Own Search Service) please refer to http://developer.yahoo.com/search/boss/. 
 
+This is an older project - these days I'd probably use HTTParty (http://github.com/jnunemaker/httparty) if I needed to access BOSS or other similar web services. 
+
 ## Bugs, Features, Feedback
 
-Feedback would be really appreciated. You can send it to me at john.pignata@gmail.com. Tickets can
-be submitted by using GitHub issues.
+Tickets can be submitted by using GitHub issues.
 
 ## Example Usage
 
+### Setup
+
+  require 'bossman'
+  include BOSSMan
+
+  BOSSMan.application_id = <Your Application ID>
+
 ### Web
-
-	require 'bossman'
-	include BOSSMan
-
-	BOSSMan.application_id = <Your Application ID>
 
 	boss = BOSSMan::Search.web("prospect park", { :count => 5, :filter => "-hate" })
 
-	puts "Number of results: #{boss.totalhits}"
-	puts
+  puts Matches:
+  puts
+  
+	boss.results.each { |result| puts "#{result.title} [#{result.url}]" }
 
-	boss.results.each do |result|
-	  puts "#{result.title}"
-	  puts "-" * 80
-	  puts "#{result.abstract}"
-	  puts
-	end
+  => Matches:
+
+  <b>Prospect</b> <b>Park</b> Alliance [http://www.prospectpark.org/]
+  <b>Prospect</b> <b>Park</b> (Brooklyn) - Wikipedia, the free encyclopedia [http://en.wikipedia.org/wiki/Prospect_Park_(Brooklyn)]
+  About <b>Prospect</b> <b>Park</b> [http://www.prospectpark.org/about]
+  <b>Prospect</b> <b>Park</b> Zoo [http://www.prospectparkzoo.com/]
+  <b>Prospect</b> <b>Park</b> [http://www.prospectpark.net/]
+  
 
 ### News
 
-	require 'bossman'
-	include BOSSMan
+	boss = BOSSMan::Search.news("brooklyn new york", { :age => "1h" })
+  puts boss.results.first.title
+  puts "-" * 80
+  puts boss.results.first.abstract
 
-	BOSSMan.application_id = <Your Application ID>
-
-	boss = BOSSMan::Search.news("brooklyn new york", { :age => "7d" })
-
-	boss.results.each do |result|
-	  puts "#{result.title} [from #{result.source}]"
-	  puts "-" * 80
-	  puts "#{result.abstract}"
-	  puts
+  => Brooklyn Park Helps Homeless
+  --------------------------------------------------------------------------------
+  When people lose their homes, they often turn to shelters as a last resort. Now, the City of Broo...
 		
 ### Images
 
-	require 'bossman'
-	include BOSSMan
-
-	BOSSMan.application_id = <Your Application ID>
-
 	boss = BOSSMan::Search.images("brooklyn dumbo", { :dimensions => "large" })
-
-	boss.results.each do |result|
-	  puts "#{result.url}: #{result.abstract}"
-	end
+	boss.results.map { |result| result.url }
 	
+	=> ["http://static.flickr.com/71/216529430_bf36a6c40b.jpg", "http://static.flickr.com/3215/2771873360_7cf2d7e572.jpg", "http://static.flickr.com/149/360481219_3ab59470cc.jpg", "http://static.flickr.com/3136/2768629082_bc0dcb76a3.jpg", "http://www.wirednewyork.com/brooklyn/dumbo/dumbo_brooklyn_bridge_3march02.jpg", "http://www.wirednewyork.com/brooklyn/dumbo/dumbo_brooklyn_bridge_plymouth_4july03.jpg", "http://static.flickr.com/3611/3538565901_f81eb52825.jpg", "http://static.flickr.com/2145/3539377152_1fd629db12.jpg", "http://static.flickr.com/2082/2340123052_fb8afe43b6.jpg", "http://static.flickr.com/3617/3508763096_ec8c53c061.jpg"]
+  
 ### Spelling
 
-	require 'bossman'
-	include BOSSMan
-	
-	BOSSMan.application_id = <Your Application ID>
-	
 	boss = BOSSMan::Search.spelling("Diabretes")
+	boss.suggestion 
 	
-	puts boss.suggestion
+	=> Diabetes
 	
 ## Output Objects
-
-Assuming an object bossed called search:
-
-search = BOSSMan::Search.web("cobble hill", 0, 20)
 
 ### Common
 
@@ -117,7 +106,7 @@ search = BOSSMan::Search.web("cobble hill", 0, 20)
 - search.results[].refererurl 		  : Link to page where image was found
 - search.results[].title				    : Title of image (usually the filename)
 - search.results[].width				    : Width of full-size image
-- search.results[].thumbnail_url		  : URL of thumbnail image
+- search.results[].thumbnail_url		: URL of thumbnail image
 - search.results[].thumbnail_height	: Height of thumbnail image
 - search.results[].thumbnail_width  : Width of thumbnail image
 
@@ -138,8 +127,9 @@ Result sets can be dumped as JSON, XML and YAML by use of to_json, to_xml, to_ya
 
 ## Installation
 
-jp@populuxe:~/code/ruby$ gem sources -a http://gems.github.com
-jp@populuxe:~/code/ruby$ gem install jpignata-bossman
+jp@populuxe:~/code/ruby$ gem install gemcutter
+jp@populuxe:~/code/ruby$ gem tumble
+jp@populuxe:~/code/ruby$ gem install bossman
 
 ## Requirements
 
