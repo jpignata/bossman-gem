@@ -2,7 +2,11 @@ require 'active_support'
 require 'net/http'
 require 'uri'
 
-Dir["#{File.dirname(__FILE__)}/bossman/*.rb"].sort.each { |bossman_lib| require bossman_lib }
+require 'bossman/base_value_object'
+require 'bossman/boss'
+require 'bossman/result_set'
+require 'bossman/result'
+require 'bossman/search'
 
 module BOSSMan
   API_VERSION = :v1
