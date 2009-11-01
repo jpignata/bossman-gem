@@ -34,9 +34,7 @@ module BOSSMan
           raise MissingConfiguration, "Application ID must be set prior to making a service call."
         end
 
-        if @options[:count] <= 0
-          raise InvalidParameter, "Invalid count. Count must be > 0." 
-        end
+        @options[:count] = 10 unless @options[:count] > 0
       end      
   end
 end
