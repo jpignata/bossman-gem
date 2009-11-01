@@ -6,12 +6,12 @@ task :default => [:spec]
 
 spec = Gem::Specification.new do |s|
   s.name      = "bossman"
-  s.version   = "0.3.0"
-  s.date      = "2009-08-21"
+  s.version   = "0.4.0"
+  s.date      = "2009-11-01"
   s.summary   = "Gem for interaction with the Yahoo BOSS web service."
   s.email     = "john.pignata@gmail.com"
   s.homepage  = "http://github.com/jpignata/bossman-gem"
-  s.authors   = ["Jay Pignata"]
+  s.authors   = ["John Pignata"]
   s.files     = ['lib/bossman.rb', 'lib/bossman/base_value_object.rb', 
                   'lib/bossman/boss.rb', 'lib/bossman/result.rb', 'lib/bossman/result_set.rb', 
                   'lib/bossman/search.rb', 'README.md', 'LICENSE']
