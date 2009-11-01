@@ -9,7 +9,7 @@ module BOSSMan
         method, query, options = args
         super unless VALID_METHODS.include?(method)
         options = {} if options.nil?
-        boss = BOSS.new(method, query, options_defaults.merge!(options))
+        boss = BOSS.new(method, query, options_defaults.merge(options))
         boss.get
       end
     end
