@@ -2,6 +2,8 @@ require 'active_support'
 require 'net/http'
 require 'uri'
 
+require 'extensions/http_success'
+
 require 'bossman/base_value_object'
 require 'bossman/boss'
 require 'bossman/result_set'

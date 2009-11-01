@@ -1,5 +1,6 @@
 module BOSSMan
   class BOSS
+    HTTP_HEADERS = { 'Accept-Encoding' => 'gzip' }
     
     def initialize(method, query, options)      
       @options = options
@@ -7,7 +8,7 @@ module BOSSMan
 
       @uri = URI.parse(URI.encode("#{API_BASEURI}/#{method}/#{API_VERSION}/#{query}"))
       @uri.query = @options.to_query
-      @request = Net::HTTP::Get.new(@uri.request_uri)
+      @request = Net::HTTP::Get.new(@uri.request_uri, HTTP_HEADERS)
     end
         
     def get
