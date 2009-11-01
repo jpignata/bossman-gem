@@ -144,10 +144,9 @@ Result sets can be dumped as JSON, XML and YAML by use of to_json, to_xml, to_ya
 
 ## Requirements
 
-* Active Support >= 2.1
-- Testing
 * FakeWeb = 1.2.6
 * RSpec >= 1.2.9
+* Active Support >= 2.1
 
 ## LICENSE:
 
