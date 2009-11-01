@@ -34,7 +34,7 @@ module BOSSMan
           raise MissingConfiguration, "Application ID must be set prior to making a service call."
         end
 
-        @options[:count] = 10 unless @options[:count] > 0
+        @options[:count] = 10 unless @options.include(:count) && @options[:count] > 0
       end      
   end
 end
