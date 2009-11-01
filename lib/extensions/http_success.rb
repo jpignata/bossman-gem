@@ -5,8 +5,7 @@ module Net
   class HTTPSuccess
 
     def body
-      case self['content-encoding']
-      when 'gzip'
+      if self['content-encoding'] == 'gzip'
         body = StringIO.new(super)
         uncompressed_body = Zlib::GzipReader.new(body)
         uncompressed_body.read
