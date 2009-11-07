@@ -15,13 +15,11 @@ Tickets can be submitted by via GitHub issues.
 ### Setup
 
     require 'bossman'
-    include BOSSMan
-
     BOSSMan.application_id = [Your Application ID]
 
 ### Web
 
-    boss = Search.web("prospect park", :count => 5, :filter => "-hate")
+    boss = BOSSMan::Search.web("prospect park", :count => 5, :filter => "-hate")
     
     puts "Matches:"
     puts
@@ -38,7 +36,7 @@ Tickets can be submitted by via GitHub issues.
 
 ### News
 
-    boss = Search.news("brooklyn new york", :age => "1h")
+    boss = BOSSMan::Search.news("brooklyn new york", :age => "1h")
     puts boss.results.first.title
     puts "-" * 80
     puts boss.results.first.abstract
@@ -49,14 +47,14 @@ Tickets can be submitted by via GitHub issues.
 		
 ### Images
 
-    boss = Search.images("brooklyn dumbo", :dimensions => "large")
+    boss = BOSSMan::Search.images("brooklyn dumbo", :dimensions => "large")
     boss.results.map { |result| result.url }
 
     => ["http://static.flickr.com/71/216529430_bf36a6c40b.jpg", "http://static.flickr.com/3215/2771873360_7cf2d7e572.jpg", "http://static.flickr.com/149/360481219_3ab59470cc.jpg", "http://static.flickr.com/3136/2768629082_bc0dcb76a3.jpg", "http://www.wirednewyork.com/brooklyn/dumbo/dumbo_brooklyn_bridge_3march02.jpg", "http://www.wirednewyork.com/brooklyn/dumbo/dumbo_brooklyn_bridge_plymouth_4july03.jpg", "http://static.flickr.com/3611/3538565901_f81eb52825.jpg", "http://static.flickr.com/2145/3539377152_1fd629db12.jpg", "http://static.flickr.com/2082/2340123052_fb8afe43b6.jpg", "http://static.flickr.com/3617/3508763096_ec8c53c061.jpg"]
   
 ### Spelling
 
-    boss = Search.spelling("Diabretes")
+    boss = BOSSMan::Search.spelling("Diabretes")
     boss.suggestion 
 
     => Diabetes
@@ -65,14 +63,14 @@ Tickets can be submitted by via GitHub issues.
 
 #### se_inlink can be used to query Yahoo for sites that link to a given URL:
 
-    links = Search.se_inlink("www.wnyc.com")
+    links = BOSSMan::Search.se_inlink("www.wnyc.com")
 	  links.results.map { |result| result.url }
 	  
 	  => ["http://www.wnyc.org/", "http://www.onthemedia.org/", "http://www.wnyc.org/shows/radiolab/", "http://cityroom.blogs.nytimes.com/2008/01/22/actor-heath-ledger-is-found-dead", "http://www.streetsblog.org/", "http://cityroom.blogs.nytimes.com/", "http://www.notmuch.com/", "http://www.williams-syndrome.org/", "http://www.manhattancc.org/", "http://scienceblogs.com/grrlscientist/"]
 
 #### se_pagedata will return a list of pages underneath a given subdomain:
 
-    pages = Search.se_inlink("www.webmd.com")
+    pages = BOSSMan::Search.se_inlink("www.webmd.com")
     pages.results.map { |result| result.url }
 
     => ["http://www.webmd.com/", "http://www.webmd.com/allergies", "http://www.webmd.com/a-to-z-guides/temporomandibular-disorders", "http://www.webmd.com/oral-health/dental-crowns", "http://www.webmd.com/oral-health/dental-health-bridges", "http://www.webmd.com/oral-health/dental-implants", "http://www.webmd.com/oral-health/guide/canker-sores", "http://www.webmd.com/oral-health/guide/teeth-grinding-bruxism", "http://www.webmd.com/oral-health/guide/gingivitis-periodontal-disease", "http://www.webmd.com/oral-health/guide/plaque-and-your-teeth"]
