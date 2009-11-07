@@ -1,7 +1,7 @@
 require File.join(File.dirname(__FILE__), "/spec_helper")
 
 describe "HTTPSuccess" do
-  describe ".body" do
+  describe "#body" do
     def do_request
       request = Net::HTTP::Get.new(@uri.request_uri)
       response = Net::HTTP.new(@uri.host).request(request)
