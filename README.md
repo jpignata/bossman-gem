@@ -130,9 +130,9 @@ Result sets can be dumped as JSON, XML and YAML by use of to_json, to_xml, to_ya
 - search.to_xml			          : dumps XML of the result set
 - search.to_json	 			      : dumps JSON of the result set
 - search.to_yaml				      : dumps YAML of the result set
-- search.results[3].to_xml    : dumps XML of one search result
-- search.results[3].to_json 	: dumps JSON of one search result
-- search.results[3].to_yaml	  : dumps YAML of one search result
+- search.results[].to_xml     : dumps XML of one search result
+- search.results[].to_json 	  : dumps JSON of one search result
+- search.results[].to_yaml	  : dumps YAML of one search result
 
 ## Installation
 
