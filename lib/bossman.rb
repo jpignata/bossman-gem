@@ -1,8 +1,10 @@
+$: << File.join(File.dirname(__FILE__))
+
 require 'active_support'
 require 'net/http'
 require 'uri'
 
-require 'extensions/http_success'
+require 'extensions/net/http_success'
 
 require 'bossman/base_value_object'
 require 'bossman/boss'
