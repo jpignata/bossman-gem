@@ -4,8 +4,6 @@
 
 BOSSMan can be used to perform image, web and news searches against Yahoo's index. For more information about BOSS (Build your Own Search Service) please refer to http://developer.yahoo.com/search/boss/. 
 
-This is an older project - I'd encourage you to look at the great HTTParty (http://github.com/jnunemaker/httparty) library if you need to quickly and easily access any kind of HTTP resource.
-
 ## Bugs, Features, Feedback
 
 Tickets can be submitted by via GitHub issues.
