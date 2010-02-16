@@ -3,7 +3,7 @@ module BOSSMan
     
     def initialize(response)
       @response = response
-      @ysearchresponse = response["ysearchresponse"]
+      @ysearchresponse = response["ysearchresponse"] || response # JSON uses ysearchresponse, XML not
       process_response
     end
               
@@ -41,8 +41,20 @@ module BOSSMan
       end
       
       def process_resultset(key)
-        results = @ysearchresponse[key].map { |result| Result.new(result) }
-        set_parameter("results", results)
+        if @ysearchresponse[key].is_a?(Array)
+          # JSON
+          resultset =  @ysearchresponse[key]
+          results = resultset.map { |result| Result.new(result) }
+          set_parameter("results", results)
+        else
+          resultset = @ysearchresponse[key]['result'] # XML puts them inside 'result'
+          results = resultset.map { |result| Result.new(result) }
+          set_parameter("results", results)
+          set_parameter("count", @ysearchresponse[key]['count'])
+          set_parameter("deephits", @ysearchresponse[key]['deephits'])
+          set_parameter("totalhits", @ysearchresponse[key]['totalhits'])
+          set_parameter("start", @ysearchresponse[key]['start'])
+        end
       end
   end  
 end

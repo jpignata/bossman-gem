@@ -1,5 +1,9 @@
 $: << File.join(File.dirname(__FILE__))
 
+# Added to parse XML
+# require 'active_resource' 
+require 'xmlsimple'
+
 require 'active_support'
 require 'net/http'
 require 'uri'

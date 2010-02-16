@@ -50,6 +50,45 @@ describe "BOSSMan" do
       ActiveSupport::JSON.decode(@search.to_json)["ysearchresponse"].should be_an_instance_of(Hash)
     end     
   end
+
+  context "Search results in XML" do     
+    before(:all) do
+      include BOSSMan
+      set_boss_api_key
+      @search = boss_search("web", "yelp", :view => "searchmonkey_rdf", :format => 'xml', :count => 5, :start => 0)
+      @result = @search.results.first
+    end
+    
+    it "contains the HTTP response code" do
+      @search.responsecode.should == "200"
+    end
+
+    it "contains the count of results returned in the search" do
+      @search.count.should == @search.results.length.to_s
+    end
+
+    it "contains SearchMonkey RDF for second result" do
+      @search.results[1].searchmonkey_rdf.should_not == {}
+    end
+
+    it "contains no SearchMonkey RDF for first result" do
+      @search.results[0].searchmonkey_rdf.should == {}
+    end
+
+    it "contains the number of total hits returned in the search" do
+      @search.totalhits.should == "19868"
+      @search.deephits.should == "178000"
+    end
+
+    it "contains the number of the first search result requests" do
+      @search.start.should == "0"
+    end
+
+    it "contains the URL to the next page of search results" do
+      @search.nextpage.should == "/ysearch/web/v1/restaurant%20cinnamon%20yelp?format=xml&filter=-hate&count=5&appid=#{BOSSMan.application_id}&view=searchmonkey_rdf&start=5"
+    end
+
+  end
   
   context "Spelling suggestion search" do
     before(:all) do
