@@ -55,7 +55,7 @@ describe "BOSSMan" do
     before(:all) do
       include BOSSMan
       set_boss_api_key
-      @search = boss_search("web", "yelp", :view => "searchmonkey_rdf", :count => 5, :start => 0)
+      @search = boss_search("web", "yelp", :view => "searchmonkey_rdf", :format => 'xml', :count => 5, :start => 0)
       @result = @search.results.first
     end
     
