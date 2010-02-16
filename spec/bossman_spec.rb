@@ -55,7 +55,7 @@ describe "BOSSMan" do
     before(:all) do
       include BOSSMan
       set_boss_api_key
-      @search = boss_search("web", "yelp", :view => "searchmonkey_rdf", :format => 'xml', :count => 5, :start => 0)
+      @search = boss_search("web", "yelp", :view => "searchmonkey_rdf", :count => 5, :start => 0)
       @result = @search.results.first
     end
     
@@ -69,6 +69,7 @@ describe "BOSSMan" do
 
     it "contains SearchMonkey RDF for second result" do
       @search.results[1].searchmonkey_rdf.should_not == {}
+      @search.results[1].searchmonkey_rdf.should_not == "Search monkey data not supported in JSON"
     end
 
     it "contains no SearchMonkey RDF for first result" do
