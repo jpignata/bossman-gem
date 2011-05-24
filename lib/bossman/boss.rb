@@ -7,7 +7,7 @@ module BOSSMan
       validate_parameters
 
       @uri = URI.parse(URI.encode("#{API_BASEURI}/#{method}/#{API_VERSION}/#{query}"))
-      @uri.query = @options.to_query
+      @uri.query = @options.each { |k,v| "#{URI.encode(k)}=#{URI.encode(v)}" }.join('&')
       @request = Net::HTTP::Get.new(@uri.request_uri, HTTP_HEADERS)
     end
         
