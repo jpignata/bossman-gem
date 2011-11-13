@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ysearchresponse xmlns="http://www.inktomi.com/" responsecode="200">
+  <nextpage><![CDATA[/ysearch/web/v1/restaurant%20cinnamon%20yelp?format=xml&filter=-hate&count=5&appid=fake_key&view=searchmonkey_rdf&start=5]]></nextpage>
+  <resultset_web count="5" start="0" totalhits="19868" deephits="178000">
+    <result>
+      <abstract>Serving natural foods free from chemicals, preservatives, and additives, and well-balanced meals that are tastefully and professionally done.</abstract>
+      <clickurl>http://lrd.yahooapis.com/_ylc=X3oDMTVjajVlbDdvBF9TAzIwMjMxNTI3MDIEYXBwaWQDblExWHVGalYzNEdWWF85LjU3OUxRRy55N0tEN2ZkX2djd25tS3VKSFNJQUtvN2g5Rk92LngwUDlQdVlLVVZxMm9jOC0EY2xpZW50A2Jvc3MEc2VydmljZQNCT1NTBHNsawN0aXRsZQRzcmNwdmlkAzdkRC5rbUtJY3JwekphbWhCd3IxYzBvM1g0QmJBMHQ2cHNzQURsT08-/SIG=118hsb81r/**http%3A//www.cinnamonsrestaurant.com/</clickurl>
+      <date>2010/02/14</date>
+      <dispurl><![CDATA[www.<b>cinnamonsrestaurant.com</b>]]></dispurl><searchmonkey_rdf></searchmonkey_rdf>
+      <size>37223</size>
+      <title><![CDATA[<b>Cinnamon's</b> <b>Restaurant</b>]]></title>
+      <url>http://www.cinnamonsrestaurant.com/</url></result>
+    <result>
+      <abstract><![CDATA[55 Reviews of <b>Cinnamon</b>&amp;#39;s <b>Restaurant</b> Kailua &amp;quot;The guava pancake is to die for! We stayed in Waikiki and I was hoping that we rented a car so <b>...</b>]]></abstract>
+      <clickurl>http://lrd.yahooapis.com/_ylc=X3oDMTVjajVlbDdvBF9TAzIwMjMxNTI3MDIEYXBwaWQDblExWHVGalYzNEdWWF85LjU3OUxRRy55N0tEN2ZkX2djd25tS3VKSFNJQUtvN2g5Rk92LngwUDlQdVlLVVZxMm9jOC0EY2xpZW50A2Jvc3MEc2VydmljZQNCT1NTBHNsawN0aXRsZQRzcmNwdmlkAzdkRC5rbUtJY3JwekphbWhCd3IxYzBvM1g0QmJBMHQ2cHNzQURsT08-/SIG=11v66df20/**http%3A//www.yelp.com/biz/cinnamons-restaurant-kailua-kailua</clickurl>
+      <date>2010/02/09</date>
+      <dispurl><![CDATA[www.<b>yelp.com</b>/biz/<wbr><b>cinnamon</b>s-<b>restaurant</b>-kailua-kailua]]></dispurl>
+      <searchmonkey_rdf>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:h="http://www.w3.org/1999/xhtml">
+          <rdf:Description rdf:about="http://www.yelp.com/biz/cinnamons-restaurant-kailua-kailua"><dc:subject xmlns:dc="http://purl.org/dc/terms/" rdf:resource="http://www.yelp.com/biz_redir?url=http%3A%2F%2Fwww.cinnamonsrestaurant.com&amp;src_bizid=9O7Saq_-ZpwFAF4E-aP3Ow&amp;cachebuster=1265695526"></dc:subject></rdf:Description>
+          <rdf:Description rdf:about="http://www.yelp.com/biz/cinnamons-restaurant-kailua-kailua"><rel:Card xmlns:rel="http://search.yahoo.com/searchmonkey-relation/" rdf:resource="http://www.yelp.com/biz_redir?url=http%3A%2F%2Fwww.cinnamonsrestaurant.com&amp;src_bizid=9O7Saq_-ZpwFAF4E-aP3Ow&amp;cachebuster=1265695526"></rel:Card></rdf:Description>
+          <rdf:Description rdf:about="http://www.yelp.com/biz_redir?url=http%3A%2F%2Fwww.cinnamonsrestaurant.com&amp;src_bizid=9O7Saq_-ZpwFAF4E-aP3Ow&amp;cachebuster=1265695526"><rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#VCard"></rdf:type></rdf:Description>
+          <rdf:Description rdf:about="http://www.yelp.com/biz_redir?url=http%3A%2F%2Fwww.cinnamonsrestaurant.com&amp;src_bizid=9O7Saq_-ZpwFAF4E-aP3Ow&amp;cachebuster=1265695526"><rdf:type rdf:resource="http://search.yahoo.com/searchmonkey/finance/Business"></rdf:type></rdf:Description>
+          <rdf:Description rdf:about="http://www.yelp.com/biz_redir?url=http%3A%2F%2Fwww.cinnamonsrestaurant.com&amp;src_bizid=9O7Saq_-ZpwFAF4E-aP3Ow&amp;cachebuster=1265695526">
+            <vcard:fn xmlns:vcard="http://www.w3.org/2006/vcard/ns#">Cinnamon's Restaurant Kailua</vcard:fn></rdf:Description>
+          <rdf:Description rdf:about="http://www.yelp.com/biz_redir?url=http%3A%2F%2Fwww.cinnamonsrestaurant.com&amp;src_bizid=9O7Saq_-ZpwFAF4E-aP3Ow&amp;cachebuster=1265695526">
+            <vcard:tel xmlns:vcard="http://www.w3.org/2006/vcard/ns#">(808) 261-8724</vcard:tel></rdf:Description>
+          <rdf:Description rdf:about="http://www.yelp.com/biz_redir?url=http%3A%2F%2Fwww.cinnamonsrestaurant.com&amp;src_bizid=9O7Saq_-ZpwFAF4E-aP3Ow&amp;cachebuster=1265695526"><vcard:url xmlns:vcard="http://www.w3.org/2006/vcard/ns#" rdf:resource="http://www.yelp.com/biz_redir?url=http%3A%2F%2Fwww.cinnamonsrestaurant.com&amp;src_bizid=9O7Saq_-ZpwFAF4E-aP3Ow&amp;cachebuster=1265695526"></vcard:url></rdf:Description>
+          <rdf:Description rdf:about="http://www.yelp.com/biz_redir?url=http%3A%2F%2Fwww.cinnamonsrestaurant.com&amp;src_bizid=9O7Saq_-ZpwFAF4E-aP3Ow&amp;cachebuster=1265695526"><vcard:org xmlns:vcard="http://www.w3.org/2006/vcard/ns#" rdf:nodeID="id1587081381"></vcard:org></rdf:Description>
+          <rdf:Description rdf:nodeID="id1587081381"><rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"></rdf:type></rdf:Description>
+          <rdf:Description rdf:nodeID="id1587081381">
+            <vcard:organization-name xmlns:vcard="http://www.w3.org/2006/vcard/ns#">Cinnamon's Restaurant Kailua</vcard:organization-name></rdf:Description>
+          <rdf:Description rdf:about="http://www.yelp.com/biz_redir?url=http%3A%2F%2Fwww.cinnamonsrestaurant.com&amp;src_bizid=9O7Saq_-ZpwFAF4E-aP3Ow&amp;cachebuster=1265695526"><vcard:adr xmlns:vcard="http://www.w3.org/2006/vcard/ns#" rdf:nodeID="id1585598531"></vcard:adr></rdf:Description>
+          <rdf:Description rdf:nodeID="id1585598531"><rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"></rdf:type></rdf:Description>
+          <rdf:Description rdf:nodeID="id1585598531">
+            <vcard:street-address xmlns:vcard="http://www.w3.org/2006/vcard/ns#">315 Uluniu St</vcard:street-address></rdf:Description>
+          <rdf:Description rdf:nodeID="id1585598531">
+            <vcard:locality xmlns:vcard="http://www.w3.org/2006/vcard/ns#">Kailua</vcard:locality></rdf:Description>
+          <rdf:Description rdf:nodeID="id1585598531">
+            <vcard:region xmlns:vcard="http://www.w3.org/2006/vcard/ns#">HI</vcard:region></rdf:Description>
+          <rdf:Description rdf:nodeID="id1585598531">
+            <vcard:postal-code xmlns:vcard="http://www.w3.org/2006/vcard/ns#">96734</vcard:postal-code></rdf:Description></rdf:RDF></searchmonkey_rdf>
+      <size>186778</size>
+      <title><![CDATA[<b>Cinnamon's</b> <b>Restaurant</b> Kailua - Kailua, HI]]></title>
+      <url>http://www.yelp.com/biz/cinnamons-restaurant-kailua-kailua</url></result>
+    <result>
+      <abstract><![CDATA[3 Reviews of IKEA <b>Restaurant</b> &amp;quot;Once a week we got to ikea whether we feel like spending a load of cash on their functional and frugal goods or not. Why? For the <b>...</b>]]></abstract>
+      <clickurl>http://lrd.yahooapis.com/_ylc=X3oDMTVjajVlbDdvBF9TAzIwMjMxNTI3MDIEYXBwaWQDblExWHVGalYzNEdWWF85LjU3OUxRRy55N0tEN2ZkX2djd25tS3VKSFNJQUtvN2g5Rk92LngwUDlQdVlLVVZxMm9jOC0EY2xpZW50A2Jvc3MEc2VydmljZQNCT1NTBHNsawN0aXRsZQRzcmNwdmlkAzdkRC5rbUtJY3JwekphbWhCd3IxYzBvM1g0QmJBMHQ2cHNzQURsT08-/SIG=11jctpham/**http%3A//www.yelp.com/biz/ikea-restaurant-draper</clickurl>
+      <date>2010/02/06</date>
+      <dispurl><![CDATA[www.<b>yelp.com</b>/biz/<wbr>ikea-<b>restaurant</b>-draper]]></dispurl>
+      <searchmonkey_rdf>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:h="http://www.w3.org/1999/xhtml">
+          <rdf:Description rdf:about="http://www.yelp.com/biz/ikea-restaurant-draper"><dc:subject xmlns:dc="http://purl.org/dc/terms/" rdf:resource="http://www.yelp.com/biz_redir?url=http%3A%2F%2Fwww.ikea.com%2Fwebapp%2Fwcs%2Fstores%2Fservlet%2FIkeaNearYouView%3FstoreId%3D12%26langId%3D-1%26catalogId%3D10103%26StoreName%3Ddraper&amp;src_bizid=x4Y5KQnF6P_-XrS8o7uzaA&amp;cachebuster=1265445839"></dc:subject></rdf:Description>
+          <rdf:Description rdf:about="http://www.yelp.com/biz/ikea-restaurant-draper"><rel:Card xmlns:rel="http://search.yahoo.com/searchmonkey-relation/" rdf:resource="http://www.yelp.com/biz_redir?url=http%3A%2F%2Fwww.ikea.com%2Fwebapp%2Fwcs%2Fstores%2Fservlet%2FIkeaNearYouView%3FstoreId%3D12%26langId%3D-1%26catalogId%3D10103%26StoreName%3Ddraper&amp;src_bizid=x4Y5KQnF6P_-XrS8o7uzaA&amp;cachebuster=1265445839"></rel:Card></rdf:Description>
+          <rdf:Description rdf:about="http://www.yelp.com/biz_redir?url=http%3A%2F%2Fwww.ikea.com%2Fwebapp%2Fwcs%2Fstores%2Fservlet%2FIkeaNearYouView%3FstoreId%3D12%26langId%3D-1%26catalogId%3D10103%26StoreName%3Ddraper&amp;src_bizid=x4Y5KQnF6P_-XrS8o7uzaA&amp;cachebuster=1265445839"><rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#VCard"></rdf:type></rdf:Description>
+          <rdf:Description rdf:about="http://www.yelp.com/biz_redir?url=http%3A%2F%2Fwww.ikea.com%2Fwebapp%2Fwcs%2Fstores%2Fservlet%2FIkeaNearYouView%3FstoreId%3D12%26langId%3D-1%26catalogId%3D10103%26StoreName%3Ddraper&amp;src_bizid=x4Y5KQnF6P_-XrS8o7uzaA&amp;cachebuster=1265445839"><rdf:type rdf:resource="http://search.yahoo.com/searchmonkey/finance/Business"></rdf:type></rdf:Description>
+          <rdf:Description rdf:about="http://www.yelp.com/biz_redir?url=http%3A%2F%2Fwww.ikea.com%2Fwebapp%2Fwcs%2Fstores%2Fservlet%2FIkeaNearYouView%3FstoreId%3D12%26langId%3D-1%26catalogId%3D10103%26StoreName%3Ddraper&amp;src_bizid=x4Y5KQnF6P_-XrS8o7uzaA&amp;cachebuster=1265445839">
+            <vcard:fn xmlns:vcard="http://www.w3.org/2006/vcard/ns#">IKEA Restaurant</vcard:fn></rdf:Description>
+          <rdf:Description rdf:about="http://www.yelp.com/biz_redir?url=http%3A%2F%2Fwww.ikea.com%2Fwebapp%2Fwcs%2Fstores%2Fservlet%2FIkeaNearYouView%3FstoreId%3D12%26langId%3D-1%26catalogId%3D10103%26StoreName%3Ddraper&amp;src_bizid=x4Y5KQnF6P_-XrS8o7uzaA&amp;cachebuster=1265445839">
+            <vcard:tel xmlns:vcard="http://www.w3.org/2006/vcard/ns#">(801) 572-4532</vcard:tel></rdf:Description>
+          <rdf:Description rdf:about="http://www.yelp.com/biz_redir?url=http%3A%2F%2Fwww.ikea.com%2Fwebapp%2Fwcs%2Fstores%2Fservlet%2FIkeaNearYouView%3FstoreId%3D12%26langId%3D-1%26catalogId%3D10103%26StoreName%3Ddraper&amp;src_bizid=x4Y5KQnF6P_-XrS8o7uzaA&amp;cachebuster=1265445839"><vcard:url xmlns:vcard="http://www.w3.org/2006/vcard/ns#" rdf:resource="http://www.yelp.com/biz_redir?url=http%3A%2F%2Fwww.ikea.com%2Fwebapp%2Fwcs%2Fstores%2Fservlet%2FIkeaNearYouView%3FstoreId%3D12%26langId%3D-1%26catalogId%3D10103%26StoreName%3Ddraper&amp;src_bizid=x4Y5KQnF6P_-XrS8o7uzaA&amp;cachebuster=1265445839"></vcard:url></rdf:Description>
+          <rdf:Description rdf:about="http://www.yelp.com/biz_redir?url=http%3A%2F%2Fwww.ikea.com%2Fwebapp%2Fwcs%2Fstores%2Fservlet%2FIkeaNearYouView%3FstoreId%3D12%26langId%3D-1%26catalogId%3D10103%26StoreName%3Ddraper&amp;src_bizid=x4Y5KQnF6P_-XrS8o7uzaA&amp;cachebuster=1265445839"><vcard:org xmlns:vcard="http://www.w3.org/2006/vcard/ns#" rdf:nodeID="id1585877958"></vcard:org></rdf:Description>
+          <rdf:Description rdf:nodeID="id1585877958"><rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"></rdf:type></rdf:Description>
+          <rdf:Description rdf:nodeID="id1585877958">
+            <vcard:organization-name xmlns:vcard="http://www.w3.org/2006/vcard/ns#">IKEA Restaurant</vcard:organization-name></rdf:Description>
+          <rdf:Description rdf:about="http://www.yelp.com/biz_redir?url=http%3A%2F%2Fwww.ikea.com%2Fwebapp%2Fwcs%2Fstores%2Fservlet%2FIkeaNearYouView%3FstoreId%3D12%26langId%3D-1%26catalogId%3D10103%26StoreName%3Ddraper&amp;src_bizid=x4Y5KQnF6P_-XrS8o7uzaA&amp;cachebuster=1265445839"><vcard:adr xmlns:vcard="http://www.w3.org/2006/vcard/ns#" rdf:nodeID="id1585921238"></vcard:adr></rdf:Description>
+          <rdf:Description rdf:nodeID="id1585921238"><rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"></rdf:type></rdf:Description>
+          <rdf:Description rdf:nodeID="id1585921238">
+            <vcard:street-address xmlns:vcard="http://www.w3.org/2006/vcard/ns#">67 West IKEA Way</vcard:street-address></rdf:Description>
+          <rdf:Description rdf:nodeID="id1585921238">
+            <vcard:locality xmlns:vcard="http://www.w3.org/2006/vcard/ns#">Draper</vcard:locality></rdf:Description>
+          <rdf:Description rdf:nodeID="id1585921238">
+            <vcard:region xmlns:vcard="http://www.w3.org/2006/vcard/ns#">UT</vcard:region></rdf:Description>
+          <rdf:Description rdf:nodeID="id1585921238">
+            <vcard:postal-code xmlns:vcard="http://www.w3.org/2006/vcard/ns#">84020</vcard:postal-code></rdf:Description></rdf:RDF></searchmonkey_rdf>
+      <size>37768</size>
+      <title><![CDATA[IKEA <b>Restaurant</b> - Draper, UT]]></title>
+      <url>http://www.yelp.com/biz/ikea-restaurant-draper</url></result>
+    <result>
+      <abstract><![CDATA[<b>Cinnamon's</b> <b>Restaurant</b>, Athol, MA : Reviews and maps - Yahoo! Local, 978.249.6033. Get Ratings, Reviews, Photos and more on Yahoo! Local.]]></abstract>
+      <clickurl>http://local.yahoo.com/info-10033146-cinnamon-s-restaurant-athol;_ylc=X3oDMTVjajVlbDdvBF9TAzIwMjMxNTI3MDIEYXBwaWQDblExWHVGalYzNEdWWF85LjU3OUxRRy55N0tEN2ZkX2djd25tS3VKSFNJQUtvN2g5Rk92LngwUDlQdVlLVVZxMm9jOC0EY2xpZW50A2Jvc3MEc2VydmljZQNCT1NTBHNsawN0aXRsZQRzcmNwdmlkAzdkRC5rbUtJY3JwekphbWhCd3IxYzBvM1g0QmJBMHQ2cHNzQURsT08-</clickurl>
+      <date>2010/01/28</date>
+      <dispurl><![CDATA[<b>local.yahoo.com</b>/<wbr>info-10033146-<b>cinnamon</b>-s-<b>restaurant</b>-athol]]></dispurl>
+      <searchmonkey_rdf>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:h="http://www.w3.org/1999/xhtml">
+          <rdf:Description rdf:about="http://local.yahoo.com/info-10033146-cinnamon-s-restaurant-athol"><dc:subject xmlns:dc="http://purl.org/dc/terms/" rdf:resource="http://local.yahoo.com/info-10033146-cinnamon-s-restaurant-athol"></dc:subject></rdf:Description>
+          <rdf:Description rdf:about="http://local.yahoo.com/info-10033146-cinnamon-s-restaurant-athol"><rdf:type rdf:resource="http://search.yahoo.com/searchmonkey/finance/Business"></rdf:type></rdf:Description>
+          <rdf:Description rdf:about="http://local.yahoo.com/info-10033146-cinnamon-s-restaurant-athol"><rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#VCard"></rdf:type></rdf:Description>
+          <rdf:Description rdf:about="http://local.yahoo.com/info-10033146-cinnamon-s-restaurant-athol">
+            <vcard:longitude xmlns:vcard="http://www.w3.org/2006/vcard/ns#" xml:lang="en">-72.229949</vcard:longitude></rdf:Description>
+          <rdf:Description rdf:about="http://local.yahoo.com/info-10033146-cinnamon-s-restaurant-athol">
+            <vcard:latitude xmlns:vcard="http://www.w3.org/2006/vcard/ns#" xml:lang="en">42.593838</vcard:latitude></rdf:Description>
+          <rdf:Description rdf:about="http://local.yahoo.com/info-10033146-cinnamon-s-restaurant-athol">
+            <vcard:tel xmlns:vcard="http://www.w3.org/2006/vcard/ns#" xml:lang="en">(978) 249-6033</vcard:tel></rdf:Description>
+          <rdf:Description rdf:about="http://local.yahoo.com/info-10033146-cinnamon-s-restaurant-athol">
+            <commerce:businessCategory xmlns:commerce="http://search.yahoo.com/searchmonkey/finance/" rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">&lt;a href=&quot;http://local.yahoo.com/results?stx=Restaurants&amp;amp;csz=Athol%2C+MA&amp;amp;ycatfilt=96926236&amp;amp;viewtype=map&quot;&gt;Restaurants&lt;/a&gt;</commerce:businessCategory></rdf:Description>
+          <rdf:Description rdf:about="http://local.yahoo.com/info-10033146-cinnamon-s-restaurant-athol">
+            <vcard:Name xmlns:vcard="http://www.w3.org/2006/vcard/ns#" xml:lang="en">Cinnamon's Restaurant</vcard:Name></rdf:Description>
+          <rdf:Description rdf:about="http://local.yahoo.com/info-10033146-cinnamon-s-restaurant-athol"><vcard:adr xmlns:vcard="http://www.w3.org/2006/vcard/ns#" rdf:nodeID="id1584923783"></vcard:adr></rdf:Description>
+          <rdf:Description rdf:nodeID="id1584923783">
+            <vcard:locality xmlns:vcard="http://www.w3.org/2006/vcard/ns#" xml:lang="en">Athol</vcard:locality></rdf:Description>
+          <rdf:Description rdf:nodeID="id1584923783">
+            <vcard:region xmlns:vcard="http://www.w3.org/2006/vcard/ns#" xml:lang="en">MA</vcard:region></rdf:Description>
+          <rdf:Description rdf:nodeID="id1584923783">
+            <vcard:street-address xmlns:vcard="http://www.w3.org/2006/vcard/ns#" xml:lang="en">491 Main St</vcard:street-address></rdf:Description>
+          <rdf:Description rdf:nodeID="id1584923783">
+            <vcard:postal-code xmlns:vcard="http://www.w3.org/2006/vcard/ns#" xml:lang="en">01331</vcard:postal-code></rdf:Description>
+          <rdf:Description rdf:about="http://local.yahoo.com/info-10033146-cinnamon-s-restaurant-athol"><dc:subject xmlns:dc="http://purl.org/dc/terms/" rdf:nodeID="INSIDE_id1591074387"></dc:subject></rdf:Description>
+          <rdf:Description rdf:nodeID="INSIDE_id1591074387"><review:hasReview xmlns:review="http://purl.org/stuff/rev#" rdf:nodeID="id1584318733"></review:hasReview></rdf:Description>
+          <rdf:Description rdf:nodeID="INSIDE_id1591074387"><rel:Review xmlns:rel="http://search.yahoo.com/searchmonkey-relation/" rdf:nodeID="id1584318733"></rel:Review></rdf:Description>
+          <rdf:Description rdf:nodeID="id1584318733"><rdf:type rdf:resource="http://purl.org/stuff/rev#Review"></rdf:type></rdf:Description>
+          <rdf:Description rdf:nodeID="id1584318733">
+            <review:rating xmlns:review="http://purl.org/stuff/rev#">5</review:rating></rdf:Description>
+          <rdf:Description rdf:nodeID="id1584318733">
+            <review:text xmlns:review="http://purl.org/stuff/rev#">I must admit, I have been to ALOT restaurants in my life. I've worked at half of them. You may say I know what it takes to have the right ingredients for a delicious eatery. Cinnamon's has a small quaint atmosphere that is complimented by a wonderful wait staff and the most DELICOUS food. I have had numerous items off the menu but I always lean towards the tender tips or the Lobster Pie that has more claws in it the ive seen in a grocery store lobster tank. What really blows my mind is the prices. Absolutely phanominal! Ask for one of the Lauras if you want the best service. (not that the rest of the staff is bad) Its just that Laura gave me such good service that I never needed to go to another server. She nailed it! Perfect timing on aps and drinks followed by the entree with a couple small subtle check ups on the table. Too bad she does take days off :( She is a wonderful asset to this all round amazing restaurant. So if your looking for a nice lil' booth for you and your sweety or</review:text></rdf:Description>
+          <rdf:Description rdf:nodeID="id1584318733">
+            <dc:date xmlns:dc="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">20090514</dc:date></rdf:Description>
+          <rdf:Description rdf:about="http://local.yahoo.com/info-10033146-cinnamon-s-restaurant-athol"><dc:subject xmlns:dc="http://purl.org/dc/terms/" rdf:nodeID="INSIDE_id1582557862"></dc:subject></rdf:Description>
+          <rdf:Description rdf:nodeID="INSIDE_id1582557862"><review:hasReview xmlns:review="http://purl.org/stuff/rev#" rdf:nodeID="id1587377456"></review:hasReview></rdf:Description>
+          <rdf:Description rdf:nodeID="INSIDE_id1582557862"><rel:Review xmlns:rel="http://search.yahoo.com/searchmonkey-relation/" rdf:nodeID="id1587377456"></rel:Review></rdf:Description>
+          <rdf:Description rdf:nodeID="id1587377456"><rdf:type rdf:resource="http://purl.org/stuff/rev#Review"></rdf:type></rdf:Description>
+          <rdf:Description rdf:nodeID="id1587377456">
+            <review:rating xmlns:review="http://purl.org/stuff/rev#">5</review:rating></rdf:Description>
+          <rdf:Description rdf:nodeID="id1587377456">
+            <review:text xmlns:review="http://purl.org/stuff/rev#">real good food my wife had the sirloin steak, melt in your mouth, seafood is good and the prices are very good.</review:text></rdf:Description>
+          <rdf:Description rdf:nodeID="id1587377456">
+            <dc:date xmlns:dc="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">20090209</dc:date></rdf:Description>
+          <rdf:Description rdf:about="http://local.yahoo.com/info-10033146-cinnamon-s-restaurant-athol"><dc:subject xmlns:dc="http://purl.org/dc/terms/" rdf:nodeID="INSIDE_id1587154276"></dc:subject></rdf:Description>
+          <rdf:Description rdf:nodeID="INSIDE_id1587154276"><review:hasReview xmlns:review="http://purl.org/stuff/rev#" rdf:nodeID="id1584897425"></review:hasReview></rdf:Description>
+          <rdf:Description rdf:nodeID="INSIDE_id1587154276"><rel:Review xmlns:rel="http://search.yahoo.com/searchmonkey-relation/" rdf:nodeID="id1584897425"></rel:Review></rdf:Description>
+          <rdf:Description rdf:nodeID="id1584897425"><rdf:type rdf:resource="http://purl.org/stuff/rev#Review"></rdf:type></rdf:Description>
+          <rdf:Description rdf:nodeID="id1584897425">
+            <review:rating xmlns:review="http://purl.org/stuff/rev#">4</review:rating></rdf:Description>
+          <rdf:Description rdf:nodeID="id1584897425">
+            <review:text xmlns:review="http://purl.org/stuff/rev#">Prices are extremely reasonable. Service was friendly and good, coffee cups always full during our breakfast visit. Food was good solid breakfast, filling and tasty. Good solid value for the money. Worth a drive out!</review:text></rdf:Description>
+          <rdf:Description rdf:nodeID="id1584897425">
+            <dc:date xmlns:dc="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">20081231</dc:date></rdf:Description></rdf:RDF></searchmonkey_rdf>
+      <size>35830</size>
+      <title><![CDATA[<b>Cinnamon's</b> <b>Restaurant</b>, Athol, MA : Reviews and maps - Yahoo! <b>...</b>]]></title>
+      <url>http://local.yahoo.com/info-10033146-cinnamon-s-restaurant-athol</url></result>
+    <result>
+      <abstract><![CDATA[<b>Cinnamon</b> Indian <b>Restaurant</b> Parsippany, Morris County New Jersey. Masters of Tandoor (clay oven) indian cusisne.]]></abstract>
+      <clickurl>http://lrd.yahooapis.com/_ylc=X3oDMTVjajVlbDdvBF9TAzIwMjMxNTI3MDIEYXBwaWQDblExWHVGalYzNEdWWF85LjU3OUxRRy55N0tEN2ZkX2djd25tS3VKSFNJQUtvN2g5Rk92LngwUDlQdVlLVVZxMm9jOC0EY2xpZW50A2Jvc3MEc2VydmljZQNCT1NTBHNsawN0aXRsZQRzcmNwdmlkAzdkRC5rbUtJY3JwekphbWhCd3IxYzBvM1g0QmJBMHQ2cHNzQURsT08-/SIG=11uelmjme/**http%3A//www.cinnamonindianrestaurant.com/news_reviews.html</clickurl>
+      <date>2010/01/29</date>
+      <dispurl><![CDATA[www.<b>cinnamonindianrestaurant.com</b>/<wbr>news_reviews.html]]></dispurl><searchmonkey_rdf></searchmonkey_rdf>
+      <size>7798</size>
+      <title><![CDATA[<b>Cinnamon</b> Indian <b>Restaurant</b> Parsippany New Jersey : NJ Indian <b>...</b>]]></title>
+      <url>http://www.cinnamonindianrestaurant.com/news_reviews.html</url>
+    </result>
+  </resultset_web>
+</ysearchresponse>

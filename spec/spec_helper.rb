@@ -1,5 +1,6 @@
 $: << File.join(File.dirname(__FILE__), "/../lib")
 
+require 'rubygems'
 require 'uri'
 require 'spec'
 require 'fakeweb'
@@ -18,15 +19,18 @@ end
 
 def register_fakeweb(method, query, options = {})
   uri = boss_url(method, query, options)
+  puts "Regging: #{uri}"
   FakeWeb.register_uri(:any, uri, :body => fakeweb_file(method, query))
 end
 
 def boss_url(method, query, options = {})
   base_uri = "#{BOSSMan::API_BASEURI}/#{method}/#{BOSSMan::API_VERSION}/#{query}"
   app_id = "appid=#{BOSSMan.application_id}"
-  count = options.include?(:count) ? "count=#{options[:count]}" : "count=10"
-  start = options.include?(:start) ? "start=#{options[:start]}" : "start=0"
-  query = "#{app_id}&#{count}&#{start}"  
+  count = options.include?(:count) ? "&count=#{options[:count]}" : "&count=10"
+  format = options.include?(:format) ? "&format=#{options[:format]}" : ""
+  start = options.include?(:start) ? "&start=#{options[:start]}" : "&start=0"
+  view = options.include?(:view) ? "&view=#{options[:view]}" : ""
+  query = "#{app_id}#{count}#{format}#{start}#{view}"
 
   URI.escape("#{base_uri}?#{query}")
 end

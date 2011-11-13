@@ -1,5 +1,14 @@
 # BOSSMan -- Gem for interaction with the Yahoo BOSS web service
 
+## Fork info
+
+This is a fork of the original BOSSMan gem. The form enables SearchMonkey usage. To make this work it parses
+the XML response coming from Yahoo BOSS (since the JSON response doesn't include the SearchMonkey RDF).
+
+You can now do something like:
+
+    boss = BOSSMan::Search.web("yelp restaurant", :count => 5, :filter => "-hate", :view => "searchmonkey_rdf", :format => "xml")
+
 ## Description
 
 BOSSMan can be used to perform image, web and news searches against Yahoo's index. For more information about BOSS (Build your Own Search Service) please refer to http://developer.yahoo.com/search/boss/. 
