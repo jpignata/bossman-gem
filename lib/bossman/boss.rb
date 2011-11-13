@@ -24,7 +24,11 @@ module BOSSMan
       def parse_response
         case @response
         when Net::HTTPSuccess
-          ResultSet.new(ActiveSupport::JSON.decode(@response.body))
+          if xml_format?
+            ResultSet.new(XmlSimple.xml_in(@response.body, { 'ForceArray' => false }))
+          else
+            ResultSet.new(ActiveSupport::JSON.decode(@response.body))
+          end
         else
           raise BOSSError, "Error occurred while querying API: #{@response.body}"
         end 
@@ -36,6 +40,10 @@ module BOSSMan
         end
 
         @options[:count] = 10 unless @options.include?(:count) && @options[:count] > 0
-      end      
+      end
+      
+      def xml_format?
+        @options[:format] =~ /^xml$/i
+      end
   end
 end
